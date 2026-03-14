@@ -1,67 +1,78 @@
-/* off-screen-menu */
+/* on-screen-menu */
+:root {
+    --gold-color: #ffd700;
+}
 header {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-.off-screen-menu {
-    background-color: rgba(0, 0, 0, 30);
-    height: 100vh;
-    width: 100%;
-    max-width: 450px;
     position: fixed;
-    top: 0;
-    right: -450px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-size: 3rem;
-    transition: .3s ease;
+    width: 100%;
 }
 
-nav {
+.on-screen-menu {
+    background-color: rgba(255, 255, 255, 0);
+    color: var(--gold-color);
+    position: absolute;
+    text-align: center;
+    font-size: 1rem;
+    transition: transform 0.3s ease-in-out;
+    top: 2vh;
+    
+}
+
+ul li {
+    display: inline-block;
+    font-family: var(--bank-gothic-bold);
+    font-size: 1.5rem;
+    margin: 0 1vw 0 0;
+}
+
+.menu {
     height: 30px;
     width: 30px;
-    position: fixed;
-    right: 3%;
-    top: 1%;
-    padding: 0;
+    position: absolute;
+    right: 3vw;
+    top: 1vh;
     align-content: center;
     justify-content: center;
+    visibility: hidden;
+    transition: 0s;
 }
 
 .menu-btn {
-    width: 100%;
-    height: 100%;
+    position: absolute;
+    right: 2vw;
+    top: 0vh;
+    width: 7vw;
+    height: 5vh;
     z-index: 100;
     opacity: 0%;
-    position: absolute;
-    top: 10%;
 }
 
 .menu span {
+    position: absolute;
+    display: inline-block;
     height: 3px;
     width: 100%;
-    background-color: #b29431;
+    background-color: var(--gold-color);
     border-radius: 25px;
-    position: absolute;
-    transition: .3s ease;
     z-index: 0;
+    visibility: hidden;
 }
 .menu span:nth-child(1) {
     top: 15%;
+    transition: rotate .25s ease;
     transform-origin: right center;
 }
 .menu span:nth-child(2) {
+    top: 50%;
     transition: width 125ms ease-in-out;
     right: 0;
 }
 .menu span:nth-child(3) {
     top: 85%;
+    transition: rotate .25s ease;
     transform-origin: right center;
 }
 
@@ -75,4 +86,29 @@ nav {
 .menu-btn:checked ~ .menu span:nth-child(1) {
     rotate: -45deg;
     translate: 0 0px;
+}
+
+@media only screen and (max-width: 1200px) {
+    .menu
+    {
+        visibility: visible;
+    }
+    .menu span {
+        visibility: visible;
+        transition: visibility 0s;
+    }
+    .on-screen-menu {
+        /* visibility: hidden; */
+        background-color: black;
+        color: var(--gold-color);
+        translate: 800vw 5vh;
+    }
+    .menu-btn:checked ~ .on-screen-menu {
+        translate: 40vw 5vh;
+        transition: transform 0.25s;
+    }
+
+    ul li {
+        display: block;
+    }
 }
