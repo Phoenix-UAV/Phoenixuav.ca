@@ -1,0 +1,33 @@
+---
+import "../styles/menu.css";
+import logo from "../assets/images/logos/PhoenixSolo.png";
+---
+
+<header>
+  <a href="/">
+    <img class="phoenixlogo" src={logo.src} alt="phoenixLogo.png" />
+  </a>
+  <input type="checkbox" class="menu-btn" />
+  <nav class="on-screen-menu">
+    <ul>
+      <a href="/about">
+        <li>ABOUT</li>
+      </a>
+      <a href="/theFleet">
+        <li>THE FLEET</li>
+      </a>
+      <a href="/sponsors">
+        <li>SPONSORS</li>
+      </a>
+      <a href="/contact">
+        <li>CONTACT</li>
+      </a>
+    </ul>
+  </nav>
+
+  <div class="menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</header>
