@@ -1,23 +1,5 @@
 ---
-import "../styles/index.css";
-import "../styles/global.css";
-import { Font } from "astro:assets";
-import Menu from "../components/pageheader.astro";
+import BaseLayout from "../layouts/baseLayout.astro";
 ---
 
-<html lang="en">
-  <head>
-    <Font cssVariable="--bank-gothic-bold" preload />
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/phoenix.svg" />
-    <link rel="icon" href="/phoenix.ico" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Phoenix Aerospace</title>
-  </head>
-  <body>
-    <!-- <Ham /> -->
-    <Menu />
-    <!-- <h1>Phoenix Aerospace</h1> -->
-  </body>
-</html>
+<BaseLayout />

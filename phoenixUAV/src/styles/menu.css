@@ -10,7 +10,9 @@ header {
     width: 100%;
 }
 .phoenixlogo {
-    width: 6vw;
+    min-width: 40px;
+    width: 5vw;
+    max-width: 60px;
     position: absolute;
     left: 3vw;
     top: 1vh;
