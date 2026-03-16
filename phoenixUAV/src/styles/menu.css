@@ -16,14 +16,15 @@ header {
     position: absolute;
     left: 1vw;
     top: 1vh;
+    z-index: 1;
 }
 
 .on-screen-menu {
-    background-color: rgba(255, 255, 255, 0);
     color: var(--gold-color);
     position: absolute;
     text-align: center;
     font-size: 1rem;
+
     transition: transform 0.3s ease-in-out;
     top: 2vh;
     
@@ -106,14 +107,22 @@ ul li {
         transition: visibility 0s;
     }
     .on-screen-menu {
-        /* visibility: hidden; */
-        background-color: black;
+        visibility: hidden;
+        height: 100vh;
+        background-image: linear-gradient(90deg, rgba(0,0,0,0.4), rgba(0,0,0,1));
+        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.4);
+        /* background-color: rgba(0, 0, 0, 0.4); */
         color: var(--gold-color);
-        translate: 800vw 5vh;
+    }
+    ul {
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.4);
     }
     .menu-btn:checked ~ .on-screen-menu {
-        translate: 40vw 5vh;
-        transition: transform 0.25s;
+        visibility: visible;
+        right: 2vw;
+        top: 5vh;
+        transition: 0.25s ease-in-out;
     }
 
     ul li {

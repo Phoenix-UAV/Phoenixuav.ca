@@ -1,7 +1,17 @@
 ---
 import BaseLayout from "../layouts/baseLayout.astro";
 import TitleCard from "../assets/images/logos/titleCardPhoen.png";
+import PageHeader from "../components/pageHeader.astro";
+import PageFooter from "../components/pageFooter.astro";
 ---
 
 <BaseLayout />
+<PageHeader />
 <img src={TitleCard.src} />
+<div class="countdowntimer">
+  <p>Compeition Countdown</p>
+  <h1 id="countdown"></h1>
+  <p>DAYS : HOURS : MINUTES : SECONDS</p>
+</div>
+<script src="../scripts/countdown.js"></script>
+<PageFooter />
