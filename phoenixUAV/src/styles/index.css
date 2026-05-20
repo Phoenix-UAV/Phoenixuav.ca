@@ -7,6 +7,13 @@ h1 {
 
 }
 
+.titlecard {
+    padding: 10vh 2vh 0 2vh;
+}
+
+
+
+
 .countdowntimer {
     display:flex;
     flex-direction: column;
@@ -16,4 +23,11 @@ h1 {
 }
 .countdowntimer p {
     font-size: 2rem;
+}
+
+.imageContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }

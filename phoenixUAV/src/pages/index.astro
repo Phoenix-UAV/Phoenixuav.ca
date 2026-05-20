@@ -3,15 +3,42 @@ import BaseLayout from "../layouts/baseLayout.astro";
 import TitleCard from "../assets/images/logos/titleCardPhoen.png";
 import PageHeader from "../components/pageHeader.astro";
 import PageFooter from "../components/pageFooter.astro";
+import StructurialWing from "../assets/images/subteamGraphics/StructuresGraphic.png";
+import FlightSystems from "../assets/images/subteamGraphics/Jetson 1.png";
+import NightHawk from "../assets/images/subteamGraphics/NightHawk.png";
+import Plane2 from "../assets/images/subteamGraphics/B2.png";
+import SponsorCover from "../assets/images/SponsorInfo/PA_Cover.png";
+import SponsorPackage from "../assets/images/SponsorInfo/PA_SPONSPACK.pdf";
 ---
 
 <BaseLayout />
 <PageHeader />
-<img src={TitleCard.src} />
+<img class="titlecard" src={TitleCard.src} />
 <div class="countdowntimer">
   <p>Compeition Countdown</p>
   <h1 id="countdown"></h1>
   <p>DAYS : HOURS : MINUTES : SECONDS</p>
 </div>
 <script src="../scripts/countdown.js"></script>
+
+<div class="imageContainer">
+  <img src={StructurialWing.src} alt="" />
+  <img src={FlightSystems.src} alt="" />
+  <img src={NightHawk.src} alt="" />
+  <img src={Plane2.src} alt="" />
+
+  <a
+    href="PA_SPONSPACK.pdf"
+    download="PA_SPONSPACK.pdf"
+    target="_blank"
+    rel="noopener"
+  >
+    <img
+      src={SponsorCover.src}
+      alt="Download PDF"
+      style="cursor: pointer; width:400px; height:auto;"
+    />
+  </a>
+</div>
+
 <PageFooter />

@@ -2,3 +2,14 @@ footer {
    position: relative;
    z-index: -1;
 }
+
+.socialsContainer { 
+   display: flex;
+   justify-content: right;
+   align-items: center;
+   padding: 15px;
+   
+}
+.socialsContainer img {
+   padding: 5px;
+}
