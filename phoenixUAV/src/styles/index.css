@@ -1,0 +1,66 @@
+body {
+    color: white;
+}
+
+h1 {
+    color: rgb(255, 255, 255);
+
+}
+
+.titlecard {
+    padding: 10vh 2vh 0 2vh;
+}
+
+.countdowntimer {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 5rem;
+}
+.countdowntimer p {
+    font-size: 2rem;
+}
+
+.description {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+
+.description img {
+    max-width: 35vw;
+    padding: 1vw;
+    border-radius: 50px;
+}
+.descriptionText {
+    width: 50%;
+    text-align: center;
+    
+}
+
+.structuralWing {
+    background-image: url(../assets/images/subteamGraphics/StructuresGraphic.png);
+}
+
+.flightSystems {
+    background-image: url(../assets/images/subteamGraphics/Jetson.png);
+}
+
+.nightHawk {
+    background-image: url(../assets/images/subteamGraphics/NightHawk.png);
+}
+
+.spirit {
+    background-image: url(../assets/images/subteamGraphics/B2.png);
+}
+
+.imageContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
