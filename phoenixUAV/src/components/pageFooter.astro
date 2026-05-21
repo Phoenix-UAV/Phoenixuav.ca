@@ -1,12 +1,22 @@
 ---
 import "../styles/footer.css";
+import notion from "../assets/images/SponsorInfo/Socials/Notion_app_logo.png";
 import insta from "../assets/images/SponsorInfo/Socials/Insta.png";
 import mail from "../assets/images/SponsorInfo/Socials/Mail.png";
 ---
 
 <footer>
   <div class="socialsContainer">
-    <img src={insta.src} alt="" />
-    <img src={mail.src} alt="" />
+    <a href="https://phoenix-aerospace.notion.site">
+      <img src={notion.src} alt="" />
+    </a>
+
+    <a href="https://www.instagram.com/munphoenixaerospace/">
+      <img src={insta.src} alt="" />
+    </a>
+
+    <a href="mailto:phoenixuav.mun@gmail.com">
+      <img src={mail.src} alt="" />
+    </a>
   </div>
 </footer>

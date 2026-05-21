@@ -1,6 +1,6 @@
 footer {
    position: relative;
-   z-index: -1;
+   z-index: 100;
 }
 
 .socialsContainer { 
@@ -11,5 +11,7 @@ footer {
    
 }
 .socialsContainer img {
+   max-width: 50px;
    padding: 5px;
+   cursor: pointer; 
 }
