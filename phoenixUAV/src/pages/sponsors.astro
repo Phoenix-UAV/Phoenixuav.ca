@@ -2,13 +2,32 @@
 import BaseLayout from "../layouts/baseLayout.astro";
 import PageHeader from "../components/pageHeader.astro";
 import Footer from "../components/pageFooter.astro";
+import SponsorCover from "../assets/images/SponsorInfo/PA_Cover.png";
+import SponsorPackage from "../assets/images/SponsorInfo/PA_SPONSPACK.pdf";
 ---
 
 <BaseLayout />
 <PageHeader />
 
 <main>
-  <section></section>
+  <section class="SponsorshipHead">
+    <h1>WHY SPONSOR PHOENIX AEROSPACE?</h1>
+  </section>
 </main>
+
+<div class="imageContainer">
+  <a
+    href="PA_SPONSPACK.pdf"
+    download="PA_SPONSPACK.pdf"
+    target="_blank"
+    rel="noopener"
+  >
+    <img
+      src={SponsorCover.src}
+      alt="Download PDF"
+      style="cursor: pointer; width:400px; height:auto;"
+    />
+  </a>
+</div>
 
 <Footer />
