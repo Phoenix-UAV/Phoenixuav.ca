@@ -1,3 +1,6 @@
+# phoenixUAV/wrangler.toml
+name = 'eagle'
+
 name = "phoenixuav"
 compatibility_date = "2025-01-01"
 
