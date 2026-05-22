@@ -23,22 +23,20 @@ h1 {
 }
 
 .description {
-    display: flex;
+    display:inline-flexbox;
     justify-content: center;
     align-items: center;
-    
 
 }
 
 .description img {
     max-width: 35vw;
-    padding: 1vw;
+    padding: 5px;
     border-radius: 50px;
 }
 .descriptionText {
     width: 50%;
     text-align: center;
-    
 }
 
 .structuralWing {
