@@ -1,7 +1,7 @@
 const Countdown = document.getElementById("countdown");
 function timer () {
     const currentDate = new Date().getTime();
-    const targetDate = new Date("June 29 2026 00:00:00");
+    const targetDate = new Date("July 2 2026 00:00:00");
     const distance = targetDate - currentDate;
 
     const days = Math.floor(distance / 1000 / 60 / 60 /24);
