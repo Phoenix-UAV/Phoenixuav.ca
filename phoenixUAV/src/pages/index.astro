@@ -1,7 +1,7 @@
 ---
 import BaseLayout from "../layouts/baseLayout.astro";
 import TitleCard from "../assets/images/logos/titleCardPhoen.png";
-import PageHeader from "../components/pageHeader.astro";
+import PageHeader from "../components/pageheader.astro";
 import PageFooter from "../components/pageFooter.astro";
 import SponsorCover from "../assets/images/SponsorInfo/PA_Cover.png";
 import SponsorPackage from "../assets/images/SponsorInfo/PA_SPONSPACK.pdf";
@@ -13,7 +13,10 @@ import PlaneLgo from "../assets/images/teamPhotos/planes&logo.png";
 
 <BaseLayout />
 <PageHeader />
-<img class="titlecard" src={TitleCard.src} />
+<div class="titleContainer">
+  <img class="titlecard" src={TitleCard.src} />
+</div>
+
 <div class="countdowntimer">
   <p>Competition Countdown</p>
   <h1 id="countdown"></h1>
