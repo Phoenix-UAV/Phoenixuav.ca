@@ -3,7 +3,7 @@ import BaseLayout from "../layouts/baseLayout.astro";
 import PageHeader from "../components/pageHeader.astro";
 import Footer from "../components/pageFooter.astro";
 import "../styles/sponsors.css";
-// import PACKAGE from "../../public/PACKAGE.pdf";
+import PACKAGE from "../../public/PACKAGE.pdf";
 ---
 
 <BaseLayout />
@@ -26,7 +26,7 @@ import "../styles/sponsors.css";
   </section>
 </main>
 <div class="imageContainer">
-  <iframe src="/package.pdf" width="100%" height="600px" allow="autoplay">
+  <iframe src={PACKAGE} width="100%" height="600px" allow="autoplay">
   </iframe>
 </div>
 <Footer />
