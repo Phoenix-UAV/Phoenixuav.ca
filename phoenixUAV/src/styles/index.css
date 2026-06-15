@@ -69,3 +69,20 @@ h1 {
     align-items: center;
     
 }
+
+@media only screen and (max-width: 800px) {
+    .countdowntimer {
+        font-size: 4rem ;
+        padding-top: 2vh;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .countdowntimer {
+        font-size: 3.5rem ;
+        padding-top: 2vh;
+    }
+    .countdowntimer p {
+        font-size: 1.5rem;
+    }
+}
