@@ -30,22 +30,20 @@ h1 {
 }
 
 .description {
-    display: flex;
+    display:inline-flexbox;
     justify-content: center;
     align-items: center;
-    
 
 }
 
 .description img {
     max-width: 35vw;
-    padding: 1vw;
+    padding: 5px;
     border-radius: 50px;
 }
 .descriptionText {
     width: 50%;
     text-align: center;
-    
 }
 
 .structuralWing {
@@ -70,4 +68,21 @@ h1 {
     justify-content: center;
     align-items: center;
     
+}
+
+@media only screen and (max-width: 800px) {
+    .countdowntimer {
+        font-size: 4rem ;
+        padding-top: 2vh;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .countdowntimer {
+        font-size: 3.5rem ;
+        padding-top: 2vh;
+    }
+    .countdowntimer p {
+        font-size: 1.5rem;
+    }
 }
