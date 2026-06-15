@@ -86,3 +86,12 @@ h1 {
         font-size: 1.5rem;
     }
 }
+@media only screen and (max-width: 550px) {
+    .countdowntimer {
+        font-size: 2.5rem;
+        padding-top: 2vh;
+    }
+    .countdowntimer p {
+        font-size: 1.1rem;
+    }
+}

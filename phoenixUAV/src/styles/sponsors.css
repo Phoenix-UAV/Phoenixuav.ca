@@ -33,3 +33,18 @@ h1 {
         padding-top: 14vh;
     }
 }
+@media only screen and (max-width: 550px) {
+    .SponsorText {
+    padding-top: 25vh;
+    }
+}
+@media only screen and (max-width: 440px) {
+    .SponsorText {
+    padding-top: 40vh;
+    }
+    .imageContainer {
+    margin-top: 50vh;
+    width: 100%;
+    position: center;
+}
+}
