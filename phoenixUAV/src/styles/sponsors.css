@@ -1,0 +1,30 @@
+
+section {
+    display: flex;
+}
+.SponsorQuestion {
+    margin-top: 30vh;
+    margin-bottom: 1dvb;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.SponsorText {
+    width: 60%;
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 40vh;
+}
+.imageContainer {
+    margin-top: 40vh;
+    padding: 10vh;
+}
+
+body {
+    color: white;
+}
+
+h1 {
+    color: rgb(255, 255, 255);
+
+}
