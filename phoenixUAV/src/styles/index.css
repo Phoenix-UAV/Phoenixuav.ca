@@ -7,7 +7,6 @@ h1 {
 
 }
 
-
 .titleContainer {
     display: flex;
     justify-content: center;
@@ -15,18 +14,30 @@ h1 {
 }
 
 .titlecard {
-    padding: 10vh 2vh 0 2vh;
+    width: 85%;
+    max-width: 650px;
+    height: auto;
+    padding: 12vh 2vh 2vh 2vh;
 }
 
 .countdowntimer {
-    display:flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    font-size: 5rem;
+    padding: 6vh 1vh;
 }
+
+#countdown {
+    font-size: clamp(1.8rem, 8vw, 4.5rem);
+    white-space: nowrap;
+    margin: 1rem 0;
+}
+
 .countdowntimer p {
-    font-size: 2rem;
+    font-size: clamp(0.8rem, 2.5vw, 1.4rem);
+    text-align: center;
+    margin: 0;
 }
 
 .description {
@@ -41,6 +52,7 @@ h1 {
     padding: 5px;
     border-radius: 50px;
 }
+
 .descriptionText {
     width: 50%;
     text-align: center;
@@ -68,30 +80,4 @@ h1 {
     justify-content: center;
     align-items: center;
     
-}
-
-@media only screen and (max-width: 800px) {
-    .countdowntimer {
-        font-size: 4rem ;
-        padding-top: 2vh;
-    }
-}
-
-@media only screen and (max-width: 700px) {
-    .countdowntimer {
-        font-size: 3.5rem ;
-        padding-top: 2vh;
-    }
-    .countdowntimer p {
-        font-size: 1.5rem;
-    }
-}
-@media only screen and (max-width: 550px) {
-    .countdowntimer {
-        font-size: 2.5rem;
-        padding-top: 2vh;
-    }
-    .countdowntimer p {
-        font-size: 1.1rem;
-    }
 }

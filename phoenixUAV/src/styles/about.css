@@ -1,14 +1,16 @@
-
 section {
-    height:100vh;
+    min-height: 100vh;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 0;
 }
 
 .description {
     display: flex;
     justify-content: center;
     align-items: center;
-    
-
 }
 
 .description img {
@@ -16,10 +18,10 @@ section {
     padding: 1vw;
     border-radius: 50px;
 }
+
 .descriptionText {
     width: 50%;
     text-align: center;
-    
 }
 
 .structuralWing {
@@ -36,7 +38,6 @@ section {
 
 .spirit {
     background-image: url(../assets/images/subteamGraphics/B2.png);
-
 }
 
 .imageContainer {
@@ -44,7 +45,29 @@ section {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
 
+@media only screen and (max-width: 768px) {
+    .description {
+        flex-direction: column;
+        padding: 2rem 1rem;
+    }
+
+    .description img {
+        max-width: 80vw;
+        margin-bottom: 2rem;
+        border-radius: 24px;
+    }
+
+    .descriptionText {
+        width: 90%;
+        font-size: 1.1rem;
+        line-height: 1.6;
+    }
+    
+    section {
+        padding: 4rem 1rem;
+    }
 }
 
 

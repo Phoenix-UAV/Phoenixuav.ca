@@ -1,24 +1,27 @@
-/* on-screen-menu */
 :root {
     --gold-color: #ffd700;
 }
+
 header {
     display: flex;
     justify-content: center;
     align-items: center;
     position: fixed;
     width: 100%;
-    padding-top: 3vh;
-    padding-bottom: 1.5vh;
+    height: 80px;
     background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(8px);
+    z-index: 999;
 }
+
 .phoenixlogo {
     min-width: 40px;
     width: 5vw;
     max-width: 60px;
     position: absolute;
-    left: 1vw;
-    top: 1vh;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
     z-index: 1;
     
 }
@@ -26,13 +29,17 @@ header {
 .on-screen-menu {
     color: var(--gold-color);
     position: absolute;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 1rem;
     transition: transform 0.3s ease-in-out;
-    /* background-color: rgba(0, 0, 0, 0.4); */
-    height: 100%;
-    /* top: 2vh; */
-    
+    height: 100%;    
+}
+
+ul {
+    margin: 0;
+    padding: 0;
 }
 
 ul li {
@@ -43,94 +50,116 @@ ul li {
 }
 
 .menu {
-    height: 30px;
-    width: 30px;
+    height: 48px;
+    width: 48px;
     position: absolute;
-    right: 3vw;
-    top: 1vh;
-    align-content: center;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     visibility: hidden;
-    transition: 0s;
+    cursor: pointer;
+    z-index: 1002;
 }
 
 .menu-btn {
     position: absolute;
-    right: 1vw;
-    top: 0vh;
-    width: 7vw;
-    height: 5vh;
-    z-index: 100;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 48px;
+    z-index: 1003;
     opacity: 0%;
+    cursor: pointer;
+    margin: 0;
 }
 
 .menu span {
     position: absolute;
     display: inline-block;
     height: 3px;
-    width: 100%;
+    width: 24px;
+    left: 12px;
     background-color: var(--gold-color);
     border-radius: 25px;
     z-index: 0;
     visibility: hidden;
 }
+
 .menu span:nth-child(1) {
-    top: 15%;
-    transition: rotate .25s ease;
-    transform-origin: right center;
-}
-.menu span:nth-child(2) {
-    top: 50%;
-    transition: width 125ms ease-in-out;
-    right: 0;
-}
-.menu span:nth-child(3) {
-    top: 85%;
-    transition: rotate .25s ease;
-    transform-origin: right center;
+    top: 15px;
+    transition: transform .25s ease;
+    transform-origin: center;
 }
 
-.menu-btn:checked ~ .menu span:nth-child(3) {
-    rotate: 45deg;
-    translate: 0 0px;
+.menu span:nth-child(2) {
+    top: 22px;
+    transition: width 125ms ease-in-out;
 }
+
+.menu span:nth-child(3) {
+    top: 29px;
+    transition: transform .25s ease;
+    transform-origin: center;
+}
+
+.menu-btn:checked ~ .menu span:nth-child(1) {
+    transform: translateY(7px) rotate(-45deg);
+}
+
 .menu-btn:checked ~ .menu span:nth-child(2) {
     width: 0;
 }
-.menu-btn:checked ~ .menu span:nth-child(1) {
-    rotate: -45deg;
-    translate: 0 0px;
+
+.menu-btn:checked ~ .menu span:nth-child(3) {
+    transform: translateY(-7px) rotate(45deg);
 }
 
 @media only screen and (max-width: 1200px) {
-    .menu
-    {
+    .menu {
         visibility: visible;
     }
+
     .menu span {
         visibility: visible;
-        transition: visibility 0s;
     }
+
     .on-screen-menu {
-        visibility: hidden;
+        position: fixed;
+        right: 0;
+        top: 0;
+        width: 250px;
         height: 100vh;
-        background-image: linear-gradient(90deg, rgba(0,0,0,0.4), rgba(0,0,0,1));
-        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.4);
-        /* background-color: rgba(0, 0, 0, 0.4); */
+        background-color: #000000;
+        border-left: 1px solid rgba(255, 215, 0, 0.2);
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.8);
         color: var(--gold-color);
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+        z-index: 1000;
     }
+
     ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         height: 100%;
-        background-color: rgba(0, 0, 0, 0.4);
-    }
-    .menu-btn:checked ~ .on-screen-menu {
-        visibility: visible;
-        right: 2vw;
-        top: 5vh;
-        transition: 0.25s ease-in-out;
+        padding: 0;
+        margin: 0;
     }
 
     ul li {
         display: block;
+        margin: 2rem 0;
+        font-size: 1.8rem;
+    }
+
+    .menu-btn:checked ~ .on-screen-menu {
+        transform: translateX(0);
     }
 }

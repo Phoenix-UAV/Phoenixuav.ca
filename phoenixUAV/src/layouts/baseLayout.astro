@@ -4,7 +4,6 @@ import "../styles/global.css";
 import { Font } from "astro:assets";
 ---
 
-<!-- components -> layouts -> layouts onto pages -->
 <html lang="en">
   <head>
     <Font cssVariable="--bank-gothic-bold" preload />
@@ -15,5 +14,7 @@ import { Font } from "astro:assets";
     <meta name="generator" content={Astro.generator} />
     <title>Phoenix Aerospace</title>
   </head>
-  <body></body>
+  <body>
+    <slot />
+  </body>
 </html>
