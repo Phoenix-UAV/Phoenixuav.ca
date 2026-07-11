@@ -3,29 +3,35 @@ import BaseLayout from "../layouts/baseLayout.astro";
 import PageHeader from "../components/pageHeader.astro";
 import Footer from "../components/pageFooter.astro";
 import "../styles/sponsors.css";
-import PACKAGE from "../../public/PACKAGE.pdf";
+const PACKAGE = "/PACKAGE.pdf";
 ---
 
-<BaseLayout />
-<PageHeader />
+<BaseLayout>
+  <PageHeader />
 
-<main>
-  <section class="SponsorshipHead">
-    <h1 class="SponsorQuestion">WHY SPONSOR PHOENIX AEROSPACE?</h1>
-  </section>
-  <section>
-    <div>
-      <p class="SponsorText">
-        Phoenix Aerospace provides students the chance to dive head first into
-        robotics, engineering, and aerodynamics. As a sponsor, you will make
-        this hands on learning possible, while gaining brand exposure on at
-        national events. Take a look at our sponsorship package below to
-        discover different ways you can get involved!
-      </p>
-    </div>
-  </section>
-</main>
-<div class="imageContainer">
-  <iframe src={PACKAGE} width="80%" height="1200px" allow="autoplay"> </iframe>
-</div>
-<Footer />
+  <main>
+    <section class="SponsorshipHead">
+      <h1 class="SponsorQuestion">WHY SPONSOR PHOENIX AEROSPACE?</h1>
+    </section>
+    <section>
+      <div>
+        <p class="SponsorText">
+          Phoenix Aerospace provides students the chance to dive head first into
+          robotics, engineering, and aerodynamics. As a sponsor, you will make
+          this hands on learning possible, while gaining brand exposure on at
+          national events. Take a look at our sponsorship package below to
+          discover different ways you can get involved!
+        </p>
+      </div>
+    </section>
+  </main>
+  <div class="imageContainer">
+    <iframe src={PACKAGE} width="80%" height="1200px" allow="autoplay"> </iframe>
+  </div>
+  <div class="pdfMobileCTA">
+    <a href={PACKAGE} class="downloadButton" target="_blank">
+      DOWNLOAD SPONSORSHIP PACKAGE (PDF)
+    </a>
+  </div>
+  <Footer />
+</BaseLayout>

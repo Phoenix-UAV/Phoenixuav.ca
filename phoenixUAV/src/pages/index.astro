@@ -1,22 +1,22 @@
 ---
 import BaseLayout from "../layouts/baseLayout.astro";
-// import TitleCard from "../assets/images/logos/titleCardPhoen.png";
 import titleCard from "../assets/images/logos/PhoenTitle2.png";
 import PageHeader from "../components/pageHeader.astro";
 import PageFooter from "../components/pageFooter.astro";
 ---
 
-<BaseLayout />
-<PageHeader />
-<div class="titleContainer">
-  <img class="titlecard" src={titleCard.src} />
-</div>
+<BaseLayout>
+  <PageHeader />
+  <div class="titleContainer">
+    <img class="titlecard" src={titleCard.src} />
+  </div>
 
-<div class="countdowntimer">
-  <p>Competition Countdown</p>
-  <h1 id="countdown"></h1>
-  <p>DAYS : HOURS : MINUTES : SECONDS</p>
-</div>
-<script src="../scripts/countdown.js"></script>
+  <div class="countdowntimer">
+    <p>Competition Countdown</p>
+    <h1 id="countdown"></h1>
+    <p>DAYS : HOURS : MINUTES : SECONDS</p>
+  </div>
+  <script src="../scripts/countdown.js"></script>
 
-<PageFooter />
+  <PageFooter />
+</BaseLayout>

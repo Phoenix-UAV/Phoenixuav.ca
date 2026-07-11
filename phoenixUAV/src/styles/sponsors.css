@@ -1,50 +1,90 @@
+main section,
+.SponsorshipHead {
+    height: auto !important;
+    min-height: auto !important;
+}
 
-section {
+.SponsorshipHead {
+    padding-top: 120px; 
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
 .SponsorQuestion {
-    margin-top: 30vh;
-    margin-bottom: 1dvb;
-    font-size: 3rem;
+    font-size: 2.5rem;
     text-align: center;
-}
-
-.SponsorText {
-    width: 60%;
-    font-size: 1.2rem;
-    text-align: center;
-    margin-top: 40vh;
-}
-.imageContainer {
-    margin-top: 40vh;
-    padding: 10vh;
-}
-
-body {
+    padding: 2rem 1rem;
+    margin: 0;
     color: white;
 }
 
-h1 {
-    color: rgb(255, 255, 255);
+.SponsorText {
+    width: 80%;
+    max-width: 800px;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    text-align: center;
+    margin: 2rem auto;
+    color: white;
+}
 
-}
-@media only screen and (max-width: 700px) {
-    .SponsorText {
-        padding-top: 14vh;
-    }
-}
-@media only screen and (max-width: 550px) {
-    .SponsorText {
-    padding-top: 25vh;
-    }
-}
-@media only screen and (max-width: 440px) {
-    .SponsorText {
-    padding-top: 40vh;
-    }
-    .imageContainer {
-    margin-top: 50vh;
+.imageContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    position: center;
+    padding: 2rem 0;
 }
+
+.imageContainer iframe {
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.pdfMobileCTA {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 1rem;
+}
+
+.downloadButton {
+    display: inline-block;
+    background-color: #ffd700;
+    color: #000;
+    font-family: var(--bank-gothic-bold);
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(255, 215, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.downloadButton:hover {
+    transform: scale(1.05);
+    background-color: #ffea70;
+}
+
+@media only screen and (max-width: 768px) {
+    .SponsorQuestion {
+        font-size: 1.8rem;
+    }
+    
+    .SponsorText {
+        width: 95%;
+        font-size: 1.1rem;
+    }
+
+    .imageContainer {
+        display: none;
+    }
+
+    .pdfMobileCTA {
+        display: flex;
+    }
 }

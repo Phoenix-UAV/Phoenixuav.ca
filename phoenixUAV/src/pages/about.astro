@@ -9,62 +9,63 @@ import PlaneLgo from "../assets/images/teamPhotos/planes&logo.png";
 import "../styles/about.css";
 ---
 
-<PageHeader />
-<BaseLayout />
-<main class="Container">
-  <section class="structuralWing">
-    <div class="description">
-      <img src={PlaneWing.src} alt="" />
-      <p class="descriptionText">
-        The Structures sub-team is responsible for the physical design,
-        analysis, and fabrication of the aircraft. This team handles the
-        physical reality of the vehicle-ensuring it is lightweight enough to
-        fly, strong enough to survive flight forces, and capable of being built
-        within a student workshop.
-      </p>
-    </div>
-  </section>
+<BaseLayout>
+  <PageHeader />
+  <main class="Container">
+    <section class="structuralWing">
+      <div class="description">
+        <img src={PlaneWing.src} alt="" />
+        <p class="descriptionText">
+          The Structures sub-team is responsible for the physical design,
+          analysis, and fabrication of the aircraft. This team handles the
+          physical reality of the vehicle-ensuring it is lightweight enough to
+          fly, strong enough to survive flight forces, and capable of being built
+          within a student workshop.
+        </p>
+      </div>
+    </section>
 
-  <section class="flightSystems">
-    <div class="description">
-      <img src={ComputerPpl.src} alt="" />
-      <p class="descriptionText">
-        The Flight Systems sub-team is responsible for the intelligence,
-        control, and operational command of the aircraft. This team handles the
-        digital and behavioral reality of the vehicle-ensuring the aircraft can
-        safely communicate with the ground, execute precise flight paths, and
-        seamlessly transition between manual piloting and fully autonomous
-        flight.
-      </p>
-    </div>
-  </section>
+    <section class="flightSystems">
+      <div class="description">
+        <img src={ComputerPpl.src} alt="" />
+        <p class="descriptionText">
+          The Flight Systems sub-team is responsible for the intelligence,
+          control, and operational command of the aircraft. This team handles the
+          digital and behavioral reality of the vehicle-ensuring the aircraft can
+          safely communicate with the ground, execute precise flight paths, and
+          seamlessly transition between manual piloting and fully autonomous
+          flight.
+        </p>
+      </div>
+    </section>
 
-  <section class="nightHawk">
-    <div class="description">
-      <img src={AeroImg.src} alt="" />
-      <p class="descriptionText">
-        The Aerodynamics & Propulsion sub-team is responsible for the flight
-        performance, stability, and power systems of the aircraft. This team
-        handles the theoretical and electrical reality of the vehicle-ensuring
-        the aircraft generates enough lift to fly, remains stable in the air,
-        and has a reliable power system to sustain flight.
-      </p>
-    </div>
-  </section>
+    <section class="nightHawk">
+      <div class="description">
+        <img src={AeroImg.src} alt="" />
+        <p class="descriptionText">
+          The Aerodynamics & Propulsion sub-team is responsible for the flight
+          performance, stability, and power systems of the aircraft. This team
+          handles the theoretical and electrical reality of the vehicle-ensuring
+          the aircraft generates enough lift to fly, remains stable in the air,
+          and has a reliable power system to sustain flight.
+        </p>
+      </div>
+    </section>
 
-  <section class="spirit">
-    <div class="description">
-      <img src={PlaneLgo.src} alt="" />
-      <p class="descriptionText">
-        The Outreach & Administration sub-team is responsible for the
-        organizational backbone, financial health, and public presence of the
-        team. This team handles the logistical and operational reality of the
-        project-managing team structure, securing funding, ensuring competition
-        compliance, and building a professional brand identity that connects the
-        team with sponsors and the community.
-      </p>
-    </div>
-  </section>
-</main>
+    <section class="spirit">
+      <div class="description">
+        <img src={PlaneLgo.src} alt="" />
+        <p class="descriptionText">
+          The Outreach & Administration sub-team is responsible for the
+          organizational backbone, financial health, and public presence of the
+          team. This team handles the logistical and operational reality of the
+          project-managing team structure, securing funding, ensuring competition
+          compliance, and building a professional brand identity that connects the
+          team with sponsors and the community.
+        </p>
+      </div>
+    </section>
+  </main>
 
-<PageFooter />
+  <PageFooter />
+</BaseLayout>
