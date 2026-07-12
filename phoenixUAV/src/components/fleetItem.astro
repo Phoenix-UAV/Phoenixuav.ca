@@ -10,7 +10,7 @@ interface Props {
     weight?: string;
     endurance?: string;
     speed?: string;
-    payload?: string;
+    mission?: string;
     propulsion?: string;
   };
 }
@@ -63,8 +63,8 @@ const hasSpecs = !!specs && Object.values(specs).some(val => val);
                 <li>+ SPEED: {specs.speed}</li>
               )}
 
-              {specs.payload && (
-                <li>+ PAYLOAD: {specs.payload}</li>
+              {specs.mission && (
+                <li>+ MISSION: {specs.mission}</li>
               )}
 
               {specs.propulsion && (
