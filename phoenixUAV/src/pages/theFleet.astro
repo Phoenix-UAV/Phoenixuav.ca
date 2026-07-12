@@ -1,15 +1,41 @@
 ---
 import BaseLayout from "../layouts/baseLayout.astro";
 import PageHeader from "../components/pageHeader.astro";
-import Footer from "../components/pageFooter.astro";
+import PageFooter from "../components/pageFooter.astro";
+import FleetItem from "../components/fleetItem.astro";
+import "../styles/theFleet.css";
 ---
 
 <BaseLayout>
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js" is:inline></script>
+
   <PageHeader />
 
-  <main>
-    <section></section>
+  <main class="fleet-container">
+    <h1 class="fleet-title">Our Current and Past UAVs</h1>
+
+    <div class="fleet-item-container">
+      <FleetItem
+        id="pax-2"
+        name="PAX-2"
+        modelSrc="/PAX-2.glb"
+        description="Our 2027 UAS Challenge Aircraft"
+        specs={{
+          wingspan: "TBA",
+          weight: "TBA",
+          endurance: "TBA",
+          speed: "TBA",
+          payload: "TBA",
+          propulsion: "TBA"
+        }}
+      >
+        <p>
+            Write Up Coming Soon...
+        </p>
+      </FleetItem>
+
+    </div>
   </main>
 
-  <Footer />
+  <PageFooter />
 </BaseLayout>
