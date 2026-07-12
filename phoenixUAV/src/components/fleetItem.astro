@@ -1,0 +1,85 @@
+---
+interface Props {
+  id: string;
+  name: string;
+  modelSrc: string;
+  description: string;
+  reversed?: boolean;
+  specs?: {
+    wingspan?: string;
+    weight?: string;
+    endurance?: string;
+    speed?: string;
+    payload?: string;
+    propulsion?: string;
+  };
+}
+
+const { id, name, modelSrc, description, reversed = false, specs } = Astro.props;
+const hasSpecs = !!specs && Object.values(specs).some(val => val);
+---
+
+<section id={id}>
+  <div class={`description ${reversed ? 'reversed' : ''}`}>
+    <model-viewer
+      src={modelSrc}
+      alt={`3D Model of the ${name} UAV`}
+      camera-controls
+      auto-rotate
+      interaction-prompt="none"
+      shadow-intensity="1"
+      touch-action="pan-y"
+    >
+    </model-viewer>
+
+    <div class="descriptionText">
+      <h2 class="uav-name">{name}</h2>
+      <p class="uav-description">{description}</p>
+      <div class="uav-divider"></div>
+      {hasSpecs && (
+        <div class="uav-specs-columns">
+          <div class="uav-spec-col">
+            <h3 class="spec-col-title">Flight Performance</h3>
+            <ul class="spec-list">
+              {specs.wingspan && (
+                <li>+ WINGSPAN: {specs.wingspan}</li>
+              )}
+
+              {specs.weight && (
+                <li>+ WEIGHT: {specs.weight}</li>
+              )}
+
+              {specs.endurance && (
+                <li>+ ENDURANCE: {specs.endurance}</li>
+              )}
+
+            </ul>
+          </div>
+          
+          <div class="uav-spec-col">
+            <h3 class="spec-col-title">System Details</h3>
+            <ul class="spec-list">
+              {specs.speed && (
+                <li>+ SPEED: {specs.speed}</li>
+              )}
+
+              {specs.payload && (
+                <li>+ PAYLOAD: {specs.payload}</li>
+              )}
+
+              {specs.propulsion && (
+                <li>+ PROPULSION: {specs.propulsion}</li>
+              )}
+
+            </ul>
+          </div>
+        </div>
+      )}
+
+    </div>
+  </div>
+
+  <div class="uav-extra-content">
+    <slot />
+  </div>
+</section>
