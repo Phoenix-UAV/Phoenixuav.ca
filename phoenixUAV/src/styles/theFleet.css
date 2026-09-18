@@ -1,6 +1,8 @@
 .fleet-container {
-    padding-top: 100px;
     width: 100%;
+    padding-top: 100px;
+    overflow-x: hidden;
+    box-sizing: border-box;
 }
 
 .fleet-title {
@@ -9,42 +11,42 @@
     text-align: center;
     color: white;
     margin-top: 3rem;
+    margin-bottom: 2rem;
     letter-spacing: 2px;
 }
 
-section {
-    min-height: 100vh; 
-    height: auto;
+.fleet-item-container {
+    width: 100%;
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+section {
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+
     padding: 2rem 0;
-}
-
-.uav-extra-content {
-    display: block; 
-    width: 100%;
-    max-width: 1200px;
-    margin: 1.5rem auto 0 auto; 
-    padding: 0 2rem; 
-    text-align: left;
-    color: #cccccc;
-    font-size: 1.1rem;
-    line-height: 1.8;
-}
-
-.uav-extra-content p {
-    margin-bottom: 1.5rem;
+    box-sizing: border-box;
 }
 
 .description {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 100%;
     max-width: 1200px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
     margin: 0 auto;
+    box-sizing: border-box;
 }
 
 .description.reversed {
@@ -52,147 +54,304 @@ section {
 }
 
 .description model-viewer {
-    width: 35vw;
-    height: 35vw;
-    max-width: 35vw;
-    max-height: 35vw;
+    width: 45%;
+    height: 500px;
+
+    max-width: 500px;
+
     padding: 1vw;
+
+    box-sizing: border-box;
+    flex-shrink: 1;
+
     border-radius: 50px;
     background-color: transparent;
 }
 
 .descriptionText {
-    width: 50%;
+    width: 55%;
+
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+
     text-align: left;
+
     padding: 0 3rem;
+
+    box-sizing: border-box;
+    min-width: 0;
 }
 
 .uav-badge {
     display: inline-block;
+
     color: var(--gold-color);
     font-family: var(--bank-gothic-bold);
+
     font-size: 0.8rem;
     letter-spacing: 2px;
+
     margin-bottom: 0.75rem;
+
     text-transform: uppercase;
 }
 
 .uav-name {
     font-family: var(--bank-gothic-bold);
+
     font-size: 2.2rem;
+
     color: white;
+
+    margin-top: 0;
     margin-bottom: 1rem;
+
     letter-spacing: 1.5px;
 }
 
 .uav-description {
     color: #cccccc;
+
     font-size: 1.1rem;
     line-height: 1.6;
+
+    margin: 0;
 }
 
 .uav-divider {
-    display: block; 
+    display: block;
+
     width: 100%;
     height: 1px;
+
     background-color: rgba(255, 255, 255, 0.1);
+
     margin: 1.5rem 0 2rem 0;
 }
 
 .uav-specs-columns {
+    width: 100%;
+
     display: flex;
     flex-direction: row;
-    width: 100%;
+
     justify-content: space-between;
-    align-items: flex-start; 
+    align-items: flex-start;
+
     gap: 3rem;
+
+    box-sizing: border-box;
 }
 
 .uav-spec-col {
     flex: 1;
+
     display: flex;
     flex-direction: column;
-    align-items: flex-start; 
+
+    align-items: flex-start;
     justify-content: flex-start;
+
     text-align: left;
+
+    min-width: 0;
 }
 
 .spec-col-title {
     font-family: var(--bank-gothic-bold);
+
     font-size: 0.85rem;
+
     color: #ffd700;
+
+    margin-top: 0;
     margin-bottom: 1rem;
+
     letter-spacing: 1px;
+
     text-transform: uppercase;
     text-align: left;
 }
 
 .spec-list {
     list-style: none;
+
     padding: 0;
     margin: 0;
+
     display: flex;
     flex-direction: column;
-    align-items: flex-start; 
+
+    align-items: flex-start;
     justify-content: flex-start;
+
     text-align: left;
 }
 
 .spec-list li {
     font-size: 0.95rem;
+
     color: #dddddd;
+
     margin-bottom: 0.6rem;
+
     text-transform: uppercase;
     letter-spacing: 0.5px;
+
     font-family: inherit;
+
     text-align: left;
-    white-space: nowrap; 
+
+    white-space: normal;
+    overflow-wrap: break-word;
+}
+
+.uav-extra-content {
+    display: block;
+
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 1.5rem auto 0 auto;
+
+    padding: 0 2rem;
+
+    box-sizing: border-box;
+
+    text-align: left;
+
+    color: #cccccc;
+
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.uav-extra-content p {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
 }
 
 .uav-footer-note {
     font-family: var(--bank-gothic-bold);
+
     font-size: 0.75rem;
+
     color: #555555;
+
     margin-top: 2.5rem;
+
     letter-spacing: 1.5px;
+
     text-transform: uppercase;
+
     font-style: italic;
 }
 
 @media only screen and (max-width: 768px) {
-    .description, .description.reversed {
+
+    .fleet-container {
+        padding-top: 80px;
+    }
+
+    .fleet-title {
+        margin-top: 2rem;
+        padding: 0 1rem;
+    }
+
+    section {
+        min-height: auto;
+        padding: 4rem 1rem;
+    }
+
+    .description,
+    .description.reversed {
+        width: 100%;
+
         flex-direction: column;
+
         padding: 2rem 1rem;
     }
 
     .description model-viewer {
         width: 80vw;
         height: 80vw;
+
         max-width: 80vw;
         max-height: 80vw;
+
         margin-bottom: 2rem;
+
+        padding: 0;
+
         border-radius: 24px;
+
+        box-sizing: border-box;
     }
 
     .descriptionText {
         width: 90%;
+
         padding: 0;
+
+        box-sizing: border-box;
+    }
+
+    .uav-name {
+        font-size: 2rem;
     }
 
     .uav-specs-columns {
         flex-direction: column;
+
         gap: 1.5rem;
     }
-    
+
+    .uav-spec-col {
+        width: 100%;
+    }
+
     .uav-extra-content {
+        width: 100%;
+
         padding: 0 1rem;
+
         margin-top: 1.5rem;
     }
-    
-    section {
-        padding: 4rem 1rem;
+}
+
+@media only screen and (max-width: 480px) {
+
+    .fleet-title {
+        font-size: 2rem;
+    }
+
+    .description model-viewer {
+        width: 85vw;
+        height: 85vw;
+
+        max-width: 85vw;
+        max-height: 85vw;
+    }
+
+    .descriptionText {
+        width: 100%;
+    }
+
+    .uav-name {
+        font-size: 1.8rem;
+    }
+
+    .uav-description {
+        font-size: 1rem;
+    }
+
+    .spec-list li {
+        font-size: 0.85rem;
+    }
+
+    .uav-extra-content {
+        font-size: 1rem;
+        line-height: 1.6;
     }
 }
