@@ -7,15 +7,17 @@ import PageFooter from "../components/pageFooter.astro";
 
 <BaseLayout>
   <PageHeader />
-  <div class="titleContainer">
-    <img class="titlecard" src={titleCard.src} />
-  </div>
+  <main class="home-hero">
+    <div class="titleContainer">
+      <img class="titlecard" src={titleCard.src} />
+    </div>
 
-  <div class="countdowntimer">
-    <p>Competition Countdown</p>
-    <h1 id="countdown"></h1>
-    <p>DAYS : HOURS : MINUTES : SECONDS</p>
-  </div>
+    <div class="countdowntimer">
+      <p>Competition Countdown</p>
+      <h1 id="countdown"></h1>
+      <p>DAYS : HOURS : MINUTES : SECONDS</p>
+    </div>
+  </main>
   <script src="../scripts/countdown.js"></script>
 
   <PageFooter />
