@@ -4,6 +4,15 @@ import PageHeader from "../components/pageHeader.astro";
 import Footer from "../components/pageFooter.astro";
 import "../styles/sponsors.css";
 const PACKAGE = "/PACKAGE.pdf";
+
+const sponsors = [
+  { name: "Cenovus Energy", logo: "/sponsors/Cenovus_Energy-Logo.png" },
+  { name: "CoLab Software", logo: "/sponsors/CoLab-Logo.png" },
+  { name: "Government of Newfoundland & Labrador", logo: "/sponsors/NFLD_GOV.png" },
+  { name: "PEGNL", logo: "/sponsors/pegnl_logo.png" },
+  { name: "Exxon", logo: "/sponsors/Exxon_Mobil_Logo.png" },
+
+];
 ---
 
 <BaseLayout>
@@ -23,6 +32,23 @@ const PACKAGE = "/PACKAGE.pdf";
           discover different ways you can get involved!
         </p>
       </div>
+    </section>
+
+    <section class="sponsorStripSection">
+      <div class="sponsorStripContainer">
+        <h2 class="sponsorStripTitle">OUR SPONSORS</h2>
+        <div class="sponsorLogosGrid">
+          {sponsors.map((sponsor) => (
+            <div class="sponsorLogoCard">
+              <img src={sponsor.logo} alt={sponsor.name} class="sponsorLogoImg" />
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="pdfHeaderSection">
+      <h2 class="pdfSectionTitle">SPONSORSHIP PACKAGE</h2>
     </section>
   </main>
   <div class="imageContainer">

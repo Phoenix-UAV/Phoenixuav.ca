@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-body { 
+body {
     font-family: var(--bank-gothic-bold);
     background-color: black;
 }

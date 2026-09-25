@@ -19,7 +19,7 @@ const { id, name, modelSrc, description, reversed = false, specs } = Astro.props
 const hasSpecs = !!specs && Object.values(specs).some(val => val);
 ---
 
-<section id={id}>
+<section id={id} class="fleet-section">
   <div class={`description ${reversed ? 'reversed' : ''}`}>
     <model-viewer
       src={modelSrc}

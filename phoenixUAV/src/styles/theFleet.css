@@ -1,6 +1,7 @@
 .fleet-container {
     width: 100%;
     padding-top: 100px;
+    padding-bottom: 4rem;
     overflow-x: hidden;
     box-sizing: border-box;
 }
@@ -10,8 +11,8 @@
     font-size: clamp(2rem, 5vw, 4rem);
     text-align: center;
     color: white;
-    margin-top: 3rem;
-    margin-bottom: 2rem;
+    margin-top: 1.5rem;
+    margin-bottom: -2rem;
     letter-spacing: 2px;
 }
 
@@ -22,18 +23,23 @@
     box-sizing: border-box;
 }
 
+.fleet-section,
 section {
     width: 100%;
-    min-height: 100vh;
+    min-height: auto;
     height: auto;
 
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
 
-    padding: 2rem 0;
+    padding: -1rem 0;
     box-sizing: border-box;
+}
+
+.fleet-section:last-child {
+    border-bottom: none;
 }
 
 .description {
@@ -213,9 +219,9 @@ section {
     width: 100%;
     max-width: 1200px;
 
-    margin: 1.5rem auto 0 auto;
+    margin: 2rem auto 0 auto;
 
-    padding: 0 2rem;
+    padding: 0 3rem;
 
     box-sizing: border-box;
 
@@ -251,17 +257,20 @@ section {
 @media only screen and (max-width: 768px) {
 
     .fleet-container {
-        padding-top: 80px;
+        padding-top: 85px;
+        padding-bottom: 2rem;
     }
 
     .fleet-title {
-        margin-top: 2rem;
+        margin-top: 1rem;
+        margin-bottom: 1.5rem;
         padding: 0 1rem;
     }
 
+    .fleet-section,
     section {
         min-height: auto;
-        padding: 4rem 1rem;
+        padding: 2.5rem 1rem;
     }
 
     .description,
@@ -270,17 +279,17 @@ section {
 
         flex-direction: column;
 
-        padding: 2rem 1rem;
+        padding: 0;
     }
 
     .description model-viewer {
         width: 80vw;
-        height: 80vw;
+        height: 320px;
 
-        max-width: 80vw;
+        max-width: 500px;
         max-height: 80vw;
 
-        margin-bottom: 2rem;
+        margin-bottom: 1.5rem;
 
         padding: 0;
 
@@ -290,9 +299,9 @@ section {
     }
 
     .descriptionText {
-        width: 90%;
+        width: 100%;
 
-        padding: 0;
+        padding: 0 0.5rem;
 
         box-sizing: border-box;
     }
@@ -314,7 +323,7 @@ section {
     .uav-extra-content {
         width: 100%;
 
-        padding: 0 1rem;
+        padding: 0 0.5rem;
 
         margin-top: 1.5rem;
     }
@@ -328,7 +337,7 @@ section {
 
     .description model-viewer {
         width: 85vw;
-        height: 85vw;
+        height: 280px;
 
         max-width: 85vw;
         max-height: 85vw;
