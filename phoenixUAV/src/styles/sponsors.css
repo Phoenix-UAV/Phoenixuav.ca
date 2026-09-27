@@ -33,21 +33,69 @@ main section,
 .sponsorStripSection {
     padding: 3.5rem 1rem;
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin: 0;
+}
+
+.sponsorStripSection:first-of-type {
+    margin-top: 3rem;
+}
+
+.sponsorStripSection:last-of-type {
+    margin-bottom: 3rem;
+}
+
+/* Tier Specific Section Colors */
+.goldTierSection {
     background: linear-gradient(135deg, #ffc800 0%, #ffc800bd 100%);
-    box-shadow: 0 6px 25px rgba(255, 217, 0, 0.216);
-    margin: 3rem 0;
+}
+
+.goldTierSection .sponsorStripTitle {
+    color: #000000;
+}
+
+.silverTierSection {
+    background: linear-gradient(135deg, #e2e8f0 0%, #cbd5e1 100%);
+}
+
+.silverTierSection .sponsorStripTitle {
+    color: #0f172a;
+}
+
+.silverTierSection .empty-tier-card {
+    color: #334155;
+}
+
+.silverTierSection .empty-tier-card a {
+    color: #0f172a;
+}
+
+.bronzeTierSection {
+    background: linear-gradient(135deg, #d97706 0%, #b45309 100%);
+}
+
+.bronzeTierSection .sponsorStripTitle {
+    color: #ffffff;
+}
+
+.bronzeTierSection .empty-tier-card {
+    color: #fef3c7;
+}
+
+.bronzeTierSection .empty-tier-card a {
+    color: #ffffff;
 }
 
 .sponsorStripContainer {
     width: 90%;
     max-width: 1200px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 1.5rem;
 }
 
 .sponsorStripTitle {
@@ -61,6 +109,31 @@ main section,
     text-align: center;
 }
 
+.empty-tier-card {
+    background: transparent;
+    border: none;
+    padding: 0.5rem 1rem;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-family: var(--bank-gothic-bold), sans-serif;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.empty-tier-card a {
+    text-decoration: underline;
+    font-weight: bold;
+    margin-top: 0.4rem;
+    transition: opacity 0.2s ease;
+}
+
+.empty-tier-card a:hover {
+    opacity: 0.75;
+}
+
 .sponsorLogosGrid {
     display: flex;
     flex-wrap: wrap;
@@ -72,7 +145,7 @@ main section,
 
 .sponsorLogoCard {
     background: #ffffff;
-    padding: 1.2rem 2.5rem;
+    padding: 1.2rem 2rem;
     border-radius: 16px;
     display: flex;
     justify-content: center;
@@ -82,6 +155,7 @@ main section,
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
     transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
     border: 1px solid rgba(0, 0, 0, 0.1);
+    overflow: hidden;
 }
 
 .sponsorLogoCard:hover {
@@ -96,10 +170,15 @@ main section,
     width: auto;
     height: auto;
     object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.sponsorLogoImg.cenovus-logo {
+    transform: scale(1.4);
 }
 
 .pdfHeaderSection {
-    padding: 2rem 1rem 3rem 1rem;
+    padding: 4rem 1rem 3rem 1rem;
     display: flex;
     justify-content: center;
     align-items: center;

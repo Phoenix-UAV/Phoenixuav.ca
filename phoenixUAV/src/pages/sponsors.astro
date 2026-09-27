@@ -5,14 +5,16 @@ import Footer from "../components/pageFooter.astro";
 import "../styles/sponsors.css";
 const PACKAGE = "/PACKAGE.pdf";
 
-const sponsors = [
-  { name: "Cenovus Energy", logo: "/sponsors/Cenovus_Energy-Logo.png" },
+const goldSponsors = [
+  { name: "Cenovus Energy", logo: "/sponsors/Cenovus_Energy-Logo.png", class: "cenovus-logo" },
   { name: "CoLab Software", logo: "/sponsors/CoLab-Logo.png" },
   { name: "Government of Newfoundland & Labrador", logo: "/sponsors/NFLD_GOV.png" },
   { name: "PEGNL", logo: "/sponsors/pegnl_logo.png" },
   { name: "Exxon", logo: "/sponsors/Exxon_Mobil_Logo.png" },
-
 ];
+
+const silverSponsors: any[] = [];
+const bronzeSponsors: any[] = [];
 ---
 
 <BaseLayout>
@@ -34,16 +36,59 @@ const sponsors = [
       </div>
     </section>
 
-    <section class="sponsorStripSection">
+    <!-- Gold Sponsors Section -->
+    <section class="sponsorStripSection goldTierSection">
       <div class="sponsorStripContainer">
-        <h2 class="sponsorStripTitle">OUR SPONSORS</h2>
+        <h2 class="sponsorStripTitle">OUR GOLD SPONSORS</h2>
         <div class="sponsorLogosGrid">
-          {sponsors.map((sponsor) => (
+          {goldSponsors.map((sponsor) => (
             <div class="sponsorLogoCard">
-              <img src={sponsor.logo} alt={sponsor.name} class="sponsorLogoImg" />
+              <img src={sponsor.logo} alt={sponsor.name} class={`sponsorLogoImg ${sponsor.class || ''}`.trim()} />
             </div>
           ))}
         </div>
+      </div>
+    </section>
+
+    <!-- Silver Sponsors Section -->
+    <section class="sponsorStripSection silverTierSection">
+      <div class="sponsorStripContainer">
+        <h2 class="sponsorStripTitle">OUR SILVER SPONSORS</h2>
+        {silverSponsors.length > 0 ? (
+          <div class="sponsorLogosGrid">
+            {silverSponsors.map((sponsor: any) => (
+              <div class="sponsorLogoCard">
+                <img src={sponsor.logo} alt={sponsor.name} class={`sponsorLogoImg ${sponsor.class || ''}`.trim()} />
+              </div>
+            ))}
+          </div>
+        ) : (
+          <div class="empty-tier-card">
+            <span>SPONSORSHIP OPPORTUNITIES AVAILABLE</span>
+            <a href="/contact">Become a Silver Sponsor &rarr;</a>
+          </div>
+        )}
+      </div>
+    </section>
+
+    <!-- Bronze Sponsors Section -->
+    <section class="sponsorStripSection bronzeTierSection">
+      <div class="sponsorStripContainer">
+        <h2 class="sponsorStripTitle">OUR BRONZE SPONSORS</h2>
+        {bronzeSponsors.length > 0 ? (
+          <div class="sponsorLogosGrid">
+            {bronzeSponsors.map((sponsor: any) => (
+              <div class="sponsorLogoCard">
+                <img src={sponsor.logo} alt={sponsor.name} class={`sponsorLogoImg ${sponsor.class || ''}`.trim()} />
+              </div>
+            ))}
+          </div>
+        ) : (
+          <div class="empty-tier-card">
+            <span>SPONSORSHIP OPPORTUNITIES AVAILABLE</span>
+            <a href="/contact">Become a Bronze Sponsor &rarr;</a>
+          </div>
+        )}
       </div>
     </section>
 
