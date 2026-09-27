@@ -5,8 +5,8 @@ function timer() {
 
     const now = new Date();
     const currentYear = now.getFullYear();
-    let targetDate = new Date(Date.UTC(currentYear, 6, 2, 2, 30, 0));
-    const resetDate = new Date(Date.UTC(currentYear, 6, 12, 2, 30, 0));
+    let targetDate = new Date(Date.UTC(currentYear, 6, 28, 2, 30, 0));
+    const resetDate = new Date(Date.UTC(currentYear, 7, 1, 2, 30, 0));
 
     let distance = 0;
 
