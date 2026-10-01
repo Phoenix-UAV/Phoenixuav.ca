@@ -1,73 +1,398 @@
-section {
-    min-height: 100vh;
-    height: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 2rem 0;
+/* Reset section heights enforced by global.css */
+main section {
+    height: auto !important;
+    min-height: auto !important;
+}
+
+/* Top Hero Section with Photo Background */
+.aboutHero {
+    min-height: 50vh !important;
+    height: 70vh !important;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url('/HomeBackGround.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center;
+    padding: 2em;
+    margin: 0;
+}
+
+.aboutHero h1 {
+    color: #ffffff;
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-family: var(--bank-gothic-bold), sans-serif;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+/* Intro Paragraph Section on Black Background */
+.whoWeAre {
+    background-color: #000000;
+    padding: 4rem 1.5rem;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100%;
 }
 
 .description {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.description img {
-    max-width: 35vw;
-    padding: 1vw;
-    border-radius: 50px;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100%;
 }
 
 .descriptionText {
-    width: 50%;
+    width: 90%;
+    max-width: 1200px;
+    font-family: var(--bank-gothic-bold), sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    letter-spacing: 0.03em;
     text-align: center;
+    margin: 0 auto;
+    color: #ffffff;
 }
 
-.structuralWing {
-    background-image: url(../assets/images/subteamGraphics/StructuresGraphic.png);
+/* Full Width Dark Grey Section for Interactive Subteams */
+.greyStripSection {
+    width: 100%;
+    background-color: #1c1d20;
+    padding: 0;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: stretch !important;
+    margin: 2rem 0 0 0;
+    box-sizing: border-box;
+    border-top: 1px solid #2a2b2f;
+    border-bottom: 1px solid #2a2b2f;
 }
 
-.flightSystems {
-    background-image: url(../assets/images/subteamGraphics/Jetson.png);
+.subteamsContainer {
+    width: 100%;
+    max-width: 100%;
+    display: flex !important;
+    flex-direction: row !important;
+    background: transparent;
+    border: none;
+    min-height: 450px;
+    box-shadow: none;
 }
 
-.nightHawk {
+/* Left Sidebar - Tab Navigation */
+.subteamsSidebar {
+    width: 28%;
+    min-width: 260px;
+    border-right: 1px solid #000000;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    align-items: stretch !important;
+    align-self: stretch !important;
+    background-color: #151618;
+}
+
+.subteamsTitle {
+    font-size: 1.25rem;
+    padding: 1.5rem 1.75rem;
+    border-bottom: 1px solid #000000;
+    margin: 0;
+    font-family: var(--bank-gothic-bold), sans-serif;
+    color: #ffffff;
+    letter-spacing: 0.08em;
+    text-align: left;
+    background-color: #0b0c0d;
+}
+
+.subteamsNav {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    align-items: stretch !important;
+    width: 100%;
+    flex: 1 !important;
+    background-color: #151618;
+}
+
+.subteamTab {
+    flex: 1 !important;
+    display: flex !important;
+    align-items: center !important;
+    padding: 0 1.75rem;
+    text-align: left;
+    background: #151618;
+    border: none;
+    border-bottom: 1px solid #000000;
+    color: #e2e8f0;
+    cursor: pointer;
+    font-size: 1.05rem;
+    font-family: var(--bank-gothic-bold), sans-serif;
+    letter-spacing: 0.06em;
+    transition: all 0.2s ease;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.subteamTab:last-child {
+    border-bottom: none;
+}
+
+.subteamTab:hover {
+    background-color: #222428;
+    color: #ffffff;
+}
+
+/* Active Subteam Highlight in Team Gold-Yellow */
+.subteamTab.active {
+    background-color: #ffd700 !important;
+    color: #000000 !important;
+    font-weight: bold;
+    border-bottom: 1px solid #d9a700;
+}
+
+/* Right Content Display integrated into Dark Grey Section */
+.subteamsDisplay {
+    flex: 1;
+    padding: 3rem 4rem;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: stretch !important;
+    background-color: #1c1d20;
+    min-height: 450px;
+    box-sizing: border-box;
+}
+
+.subteamPanel {
+    display: none;
+    width: 100%;
+    height: 100%;
+    min-height: 380px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    box-sizing: border-box;
+}
+
+#panel-aero {
     background-image: url(../assets/images/subteamGraphics/NightHawk.png);
 }
 
-.spirit {
+#panel-business {
     background-image: url(../assets/images/subteamGraphics/B2.png);
 }
 
-.imageContainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+#panel-electrical {
+    background-image: url(../assets/images/subteamGraphics/Jetson.png);
+    background-size: 90% auto;
 }
 
-@media only screen and (max-width: 768px) {
-    .description {
-        flex-direction: column;
-        padding: 2rem 1rem;
+#panel-software {
+    background-image: url(../assets/images/subteamGraphics/Jetson.png);
+    background-size: 90% auto;
+}
+
+#panel-structures {
+    background-image: url(../assets/images/subteamGraphics/StructuresGraphic.png);
+}
+
+.subteamPanel.active {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+}
+
+.panelText {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    display: block !important;
+}
+
+.panelText p {
+    margin: 0;
+    color: #ffffff;
+    font-family: var(--bank-gothic-bold), sans-serif;
+    font-size: 1.15rem;
+    line-height: 1.85;
+    letter-spacing: 0.03em;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.9);
+}
+
+@media only screen and (max-width: 900px) {
+    .subteamsContainer {
+        flex-direction: column !important;
     }
 
-    .description img {
-        max-width: 80vw;
-        margin-bottom: 2rem;
-        border-radius: 24px;
+    .subteamsSidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #000000;
     }
 
-    .descriptionText {
-        width: 90%;
-        font-size: 1.1rem;
-        line-height: 1.6;
+    .subteamTab {
+        padding: 1.25rem 1.5rem !important;
+        flex: none !important;
     }
-    
-    section {
-        padding: 4rem 1rem;
+
+    .subteamTab:last-child {
+        border-bottom: 1px solid #000000;
     }
+
+    .subteamsDisplay {
+        padding: 2.5rem 1.5rem;
+    }
+}
+
+/* OUR TEAM Section Styles */
+.ourTeamSection {
+    width: 100%;
+    background-color: #000000;
+    padding: 5rem 1.5rem 6rem 1.5rem;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    box-sizing: border-box;
+}
+
+.teamContainer {
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+}
+
+.teamTitle {
+    font-family: var(--bank-gothic-bold), sans-serif;
+    font-size: clamp(2.2rem, 5vw, 3.2rem);
+    font-weight: bold;
+    color: #ffffff;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin: 0 0 3.5rem 0;
+    text-align: center;
+}
+
+.subteamGroup {
+    width: 100%;
+    margin-bottom: 4.5rem;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+}
+
+.subteamGroup:last-child {
+    margin-bottom: 0;
+}
+
+.subteamGroupTitle {
+    font-family: var(--bank-gothic-bold), sans-serif;
+    font-size: 1.35rem;
+    font-weight: bold;
+    color: #ffffff;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    margin: 0 0 2rem 0;
+    text-align: center;
+}
+
+.teamGrid {
+    width: 100%;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    align-items: flex-start !important;
+    gap: 2.5rem 1.75rem;
+}
+
+.teamMemberCard {
+    width: 155px;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center;
+}
+
+.memberPhotoContainer {
+    width: 100%;
+    height: 155px;
+    border-radius: 14px;
+    overflow: hidden;
+    background-color: #1a1b1e;
+    margin-bottom: 0.85rem;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+    display: block !important;
+}
+
+.memberPhoto {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 14px;
+    display: block;
+}
+
+.memberName {
+    font-family: var(--bank-gothic-bold), sans-serif;
+    font-size: 0.95rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin: 0 0 0.35rem 0;
+    line-height: 1.25;
+    text-align: center;
+}
+
+.memberRole {
+    font-family: var(--bank-gothic-bold), sans-serif;
+    font-size: 0.8rem;
+    color: #a1a1aa;
+    margin: 0 0 0.65rem 0;
+    line-height: 1.25;
+    text-align: center;
+}
+
+.memberSocials {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 0.65rem;
+    min-height: 28px;
+}
+
+.socialBtn {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    color: #ffffff;
+    text-decoration: none;
+    transition: transform 0.2s ease, opacity 0.2s ease, color 0.2s ease;
+}
+
+.socialIcon {
+    width: 22px;
+    height: 22px;
+    color: #ffffff;
+    fill: currentColor;
+    transition: color 0.2s ease;
+}
+
+.socialBtn:hover {
+    transform: scale(1.18);
+    color: #ffd700;
+    opacity: 0.9;
+}
+
+.socialBtn:hover .socialIcon {
+    color: #ffd700;
 }
 
 
