@@ -201,7 +201,7 @@ export const subteamMembers = [
       },
 
       { 
-        name: "Joy Henei", 
+        name: "Joy Henein", 
         role: "Structures Advisor", 
         image: "/Team-members/Profile_placeholder.png",
         email: "jhenein@mun.ca"
