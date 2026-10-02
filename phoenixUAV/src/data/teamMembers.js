@@ -143,7 +143,7 @@ export const subteamMembers = [
 
       { 
         name: "Alix Boivin", 
-        role: "Flight Systems Advisor", 
+        role: ""Software Member", 
         image: "/Team-members/Profile_placeholder.png",
         email: "arboivin@mun.ca",
         github: "https://github.com/Animalliketree"
@@ -151,7 +151,7 @@ export const subteamMembers = [
 
       { 
         name: "Ella Robinette", 
-        role: "Flight Systems Advisor", 
+        role: "Software Member", 
         image: "/Team-members/Profile_placeholder.png",
         email: "marobinette@mun.ca",
         github: "https://github.com/ella-ti"
