@@ -43,7 +43,7 @@
 }
 
 .contact-heading {
-  font-family: var(--bank-gothic-bold), sans-serif;
+  font-family: var(--font-heading);
   font-size: clamp(2.2rem, 4vw, 3.5rem);
   font-weight: 700;
   color: #ffffff;
@@ -54,7 +54,7 @@
 }
 
 .contact-subheading {
-  font-family: var(--bank-gothic-bold), sans-serif;
+  font-family: var(--font-heading);
   font-size: clamp(1rem, 1.8vw, 1.3rem);
   color: var(--gold-color, #ffd700);
   margin: 0 0 1rem 0;
@@ -63,7 +63,7 @@
 }
 
 .contact-text {
-  font-family: system-ui, -apple-system, sans-serif;
+  font-family: var(--font-body);
   font-size: 1.05rem;
   color: #a1a1aa;
   line-height: 1.6;
@@ -103,7 +103,7 @@
   border: none;
   color: #ffffff;
   font-size: 1.1rem;
-  font-family: system-ui, -apple-system, sans-serif;
+  font-family: var(--font-body);
   font-weight: 500;
   display: inline-flex;
   align-items: center;
@@ -126,7 +126,7 @@
 
 .copy-badge {
   font-size: 0.75rem;
-  font-family: var(--bank-gothic-bold), sans-serif;
+  font-family: var(--font-body);
   letter-spacing: 1px;
   padding: 0.25rem 0.6rem;
   border-radius: 20px;
@@ -229,7 +229,7 @@
   color: #e4e4e7;
   margin-bottom: 0.5rem;
   font-weight: 600;
-  font-family: var(--bank-gothic-bold), sans-serif;
+  font-family: var(--font-heading);
   letter-spacing: 1.5px;
   text-transform: uppercase;
 }
@@ -242,7 +242,7 @@
   background-color: rgba(255, 255, 255, 0.03);
   color: #ffffff;
   font-size: 1rem;
-  font-family: system-ui, -apple-system, sans-serif;
+  font-family: var(--font-body);
   box-sizing: border-box;
   outline: none;
   border-radius: 8px;
@@ -282,7 +282,7 @@
   padding: 0.9rem 3.25rem;
   font-size: 1rem;
   font-weight: 700;
-  font-family: var(--bank-gothic-bold), sans-serif;
+  font-family: var(--font-heading);
   letter-spacing: 2px;
   text-transform: uppercase;
   cursor: pointer;
@@ -309,7 +309,7 @@
   padding: 1rem 1.25rem;
   border-radius: 8px;
   font-size: 0.95rem;
-  font-family: system-ui, -apple-system, sans-serif;
+  font-family: var(--font-body);
   text-align: center;
   width: 100%;
   margin-top: 1rem;

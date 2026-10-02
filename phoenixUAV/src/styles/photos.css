@@ -19,7 +19,7 @@
 
 .gallery-title {
   font-size: clamp(2.2rem, 5vw, 3.8rem);
-  font-family: var(--bank-gothic-bold);
+  font-family: var(--font-heading);
   color: #ffffff;
   letter-spacing: 2px;
   margin-bottom: 0.75rem;
@@ -168,7 +168,7 @@
 
 .lightbox-counter {
   margin-top: 1rem;
-  font-family: var(--bank-gothic-bold);
+  font-family: var(--font-body);
   font-size: 0.85rem;
   color: var(--gold-color, #ffd700);
   letter-spacing: 1px;

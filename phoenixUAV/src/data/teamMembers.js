@@ -6,6 +6,8 @@
 // - 'email': Email address (e.g. "name@phoenixuav.ca")
 // - 'website': Personal website or portfolio URL
 
+import { email } from "astro:schema";
+
 export const subteamMembers = [
   {
     subteam: "LEADS",
@@ -42,10 +44,16 @@ export const subteamMembers = [
         email: "ytelsayed@mun.ca"
       },
       { 
-        name: "Team Member 4", 
+        name: "Jeffrie Pitchee", 
         role: "Electrical Lead", 
         image: "/Team-members/Profile_placeholder.png",
-        email: "@mun.ca"
+        email: "mrjpitchee@mun.ca"
+      },
+      { 
+        name: "Jackson Rose", 
+        role: "Electrical Lead", 
+        image: "/Team-members/Profile_placeholder.png",
+        email: "jacksonr@mun.ca"
       },
       { 
         name: "Jack Ellison", 
@@ -53,7 +61,7 @@ export const subteamMembers = [
         image: "/Team-members/Profile_placeholder.png",
         email: "jtellison@mun.ca",
         github: "https://github.com/JackEllison4",
-        website: "jackellison.ca"
+        website: "https://jackellison.ca"
       },
       { 
         name: "Chloe McNamara", 
@@ -132,6 +140,22 @@ export const subteamMembers = [
       //  email: "lead@phoenixuav.ca",
       //  website: "https://example.com"
       //},
+
+      { 
+        name: "Alix Boivin", 
+        role: "Flight Systems Advisor", 
+        image: "/Team-members/Profile_placeholder.png",
+        email: "arboivin@mun.ca",
+        github: "https://github.com/Animalliketree"
+      },
+
+      { 
+        name: "Ella Robinette", 
+        role: "Flight Systems Advisor", 
+        image: "/Team-members/Profile_placeholder.png",
+        email: "marobinette@mun.ca",
+        github: "https://github.com/ella-ti"
+      },
       
     ]
   },
@@ -153,5 +177,36 @@ export const subteamMembers = [
       
     ]
   },
-  
+
+  {
+    subteam: "Advisors",
+    members: [
+      
+      // Example Member Format:
+      //{ 
+      //  name: "Team Member 1", 
+      //  role: "Team Lead", 
+      //  image: "/Team-members/Profile_placeholder.png", 
+      //  linkedin: "https://linkedin.com",
+      //  github: "https://github.com",
+      //  email: "lead@phoenixuav.ca",
+      //  website: "https://example.com"
+      //},
+
+      { 
+        name: "Rohan Torul", 
+        role: "Flight Systems Advisor", 
+        image: "/Team-members/Profile_placeholder.png",
+        github: "https://github.com/RohanTorul",
+      },
+
+      { 
+        name: "Joy Henei", 
+        role: "Structures Advisor", 
+        image: "/Team-members/Profile_placeholder.png",
+        email: "jhenein@mun.ca"
+      },
+      
+    ]
+  },   
 ];

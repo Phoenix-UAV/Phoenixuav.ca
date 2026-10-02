@@ -42,17 +42,28 @@ const hasSpecs = !!specs && Object.values(specs).some(val => val);
             <h3 class="spec-col-title">Flight Performance</h3>
             <ul class="spec-list">
               {specs.wingspan && (
-                <li>+ WINGSPAN: {specs.wingspan}</li>
+                <li>
+                  <span class="spec-icon">+</span>
+                  <span class="spec-label">WINGSPAN:</span>
+                  <span class="spec-value">{specs.wingspan}</span>
+                </li>
               )}
 
               {specs.weight && (
-                <li>+ WEIGHT: {specs.weight}</li>
+                <li>
+                  <span class="spec-icon">+</span>
+                  <span class="spec-label">WEIGHT:</span>
+                  <span class="spec-value">{specs.weight}</span>
+                </li>
               )}
 
               {specs.endurance && (
-                <li>+ ENDURANCE: {specs.endurance}</li>
+                <li>
+                  <span class="spec-icon">+</span>
+                  <span class="spec-label">ENDURANCE:</span>
+                  <span class="spec-value">{specs.endurance}</span>
+                </li>
               )}
-
             </ul>
           </div>
           
@@ -60,22 +71,32 @@ const hasSpecs = !!specs && Object.values(specs).some(val => val);
             <h3 class="spec-col-title">System Details</h3>
             <ul class="spec-list">
               {specs.speed && (
-                <li>+ SPEED: {specs.speed}</li>
+                <li>
+                  <span class="spec-icon">+</span>
+                  <span class="spec-label">SPEED:</span>
+                  <span class="spec-value">{specs.speed}</span>
+                </li>
               )}
 
               {specs.mission && (
-                <li>+ MISSION: {specs.mission}</li>
+                <li>
+                  <span class="spec-icon">+</span>
+                  <span class="spec-label">MISSION:</span>
+                  <span class="spec-value">{specs.mission}</span>
+                </li>
               )}
 
               {specs.propulsion && (
-                <li>+ PROPULSION: {specs.propulsion}</li>
+                <li>
+                  <span class="spec-icon">+</span>
+                  <span class="spec-label">PROPULSION:</span>
+                  <span class="spec-value">{specs.propulsion}</span>
+                </li>
               )}
-
             </ul>
           </div>
         </div>
       )}
-
     </div>
   </div>
 

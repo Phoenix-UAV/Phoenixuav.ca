@@ -2,45 +2,8 @@
 import BaseLayout from "../layouts/baseLayout.astro";
 import PageHeader from "../components/pageHeader.astro";
 import PageFooter from "../components/pageFooter.astro";
+import { galleryImages } from "../data/photos.js";
 import "../styles/photos.css";
-
-// Import team photos from src/assets
-import PlaneWing from "../assets/images/teamPhotos/PlaneWing.png";
-import Brainstorm from "../assets/images/teamPhotos/Brainstorm.png";
-import AeroImg from "../assets/images/teamPhotos/A&P.png";
-import PlaneLogo from "../assets/images/teamPhotos/planes&logo.png";
-import Structures from "../assets/images/teamPhotos/Stuctures 1.png";
-import WingHeld from "../assets/images/teamPhotos/WingHeld 1.png";
-
-const photoPageImages = Object.values(
-  import.meta.glob("../../public/photo-page/*", {
-    eager: true,
-    query: "?url",
-    import: "default",
-  }),
-) as string[];
-
-const galleryImages = [
-  PlaneWing.src,
-  Brainstorm.src,
-  WingHeld.src,
-  "/photo-page/QV2A9565.JPG",
-  "/photo-page/QV2A9570.JPG",
-  AeroImg.src,
-  "/photo-page/20260910_212436.jpg",
-  "/photo-page/20260915_173823.jpg",
-  "/photo-page/QV2A9574.JPG",
-  Structures.src,
-  "/photo-page/IMG_1106.jpg",
-  "/photo-page/QV2A9576.JPG",
-  PlaneLogo.src,
-  "/photo-page/IMG_1849.jpg",
-  "/photo-page/IMG_8295.jpg",
-  ];
-
-galleryImages.push(
-  ...photoPageImages.filter((src) => !galleryImages.includes(src)),
-);
 ---
 
 <BaseLayout>

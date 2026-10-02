@@ -2,21 +2,17 @@
 import BaseLayout from "../layouts/baseLayout.astro";
 import PageHeader from "../components/pageHeader.astro";
 import Footer from "../components/pageFooter.astro";
+import { goldSponsors, silverSponsors, bronzeSponsors } from "../data/sponsors.js";
 import "../styles/sponsors.css";
 const PACKAGE = "/PACKAGE.pdf";
 
-const goldSponsors = [
-  { name: "Cenovus Energy", logo: "/sponsors/Cenovus_Energy-Logo.png", class: "cenovus-logo" },
-  { name: "Government of Newfoundland & Labrador", logo: "/sponsors/NFLD_GOV.png" },
-  { name: "PEGNL", logo: "/sponsors/pegnl_logo.png" },
-  { name: "Hebron", logo: "/sponsors/Hebron-logo.png", class: "hebron-logo" },
-  { name: "Hibernia", logo: "/sponsors/hibernia-logo.png", class: "hibernia-logo" }
-];
-
-const silverSponsors: any[] = [];
-const bronzeSponsors: any[] = [
-  { name: "CoLab Software", logo: "/sponsors/CoLab-Logo.png" },
-];
+interface Sponsor {
+  name: string;
+  logo: string;
+  url?: string;
+  website?: string;
+  class?: string;
+}
 ---
 
 <BaseLayout>
@@ -42,13 +38,34 @@ const bronzeSponsors: any[] = [
     <section class="sponsorStripSection goldTierSection">
       <div class="sponsorStripContainer">
         <h2 class="sponsorStripTitle">OUR GOLD SPONSORS</h2>
-        <div class="sponsorLogosGrid">
-          {goldSponsors.map((sponsor) => (
-            <div class="sponsorLogoCard">
-              <img src={sponsor.logo} alt={sponsor.name} class={`sponsorLogoImg ${sponsor.class || ''}`.trim()} />
-            </div>
-          ))}
-        </div>
+        {goldSponsors.length > 0 ? (
+          <div class="sponsorLogosGrid">
+            {goldSponsors.map((sponsor: Sponsor) => {
+              const link = sponsor.url || sponsor.website;
+              return link ? (
+                <a
+                  href={link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="sponsorLogoCard sponsorLogoLink"
+                  title={`Visit ${sponsor.name}'s website`}
+                  aria-label={`Visit ${sponsor.name}'s website (opens in a new tab)`}
+                >
+                  <img src={sponsor.logo} alt={sponsor.name} class={`sponsorLogoImg ${sponsor.class || ''}`.trim()} />
+                </a>
+              ) : (
+                <div class="sponsorLogoCard">
+                  <img src={sponsor.logo} alt={sponsor.name} class={`sponsorLogoImg ${sponsor.class || ''}`.trim()} />
+                </div>
+              );
+            })}
+          </div>
+        ) : (
+          <div class="empty-tier-card">
+            <span>SPONSORSHIP OPPORTUNITIES AVAILABLE</span>
+            <a href="/contact">Become a Gold Sponsor &rarr;</a>
+          </div>
+        )}
       </div>
     </section>
 
@@ -58,11 +75,25 @@ const bronzeSponsors: any[] = [
         <h2 class="sponsorStripTitle">OUR SILVER SPONSORS</h2>
         {silverSponsors.length > 0 ? (
           <div class="sponsorLogosGrid">
-            {silverSponsors.map((sponsor: any) => (
-              <div class="sponsorLogoCard">
-                <img src={sponsor.logo} alt={sponsor.name} class={`sponsorLogoImg ${sponsor.class || ''}`.trim()} />
-              </div>
-            ))}
+            {silverSponsors.map((sponsor: Sponsor) => {
+              const link = sponsor.url || sponsor.website;
+              return link ? (
+                <a
+                  href={link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="sponsorLogoCard sponsorLogoLink"
+                  title={`Visit ${sponsor.name}'s website`}
+                  aria-label={`Visit ${sponsor.name}'s website (opens in a new tab)`}
+                >
+                  <img src={sponsor.logo} alt={sponsor.name} class={`sponsorLogoImg ${sponsor.class || ''}`.trim()} />
+                </a>
+              ) : (
+                <div class="sponsorLogoCard">
+                  <img src={sponsor.logo} alt={sponsor.name} class={`sponsorLogoImg ${sponsor.class || ''}`.trim()} />
+                </div>
+              );
+            })}
           </div>
         ) : (
           <div class="empty-tier-card">
@@ -79,11 +110,25 @@ const bronzeSponsors: any[] = [
         <h2 class="sponsorStripTitle">OUR BRONZE SPONSORS</h2>
         {bronzeSponsors.length > 0 ? (
           <div class="sponsorLogosGrid">
-            {bronzeSponsors.map((sponsor: any) => (
-              <div class="sponsorLogoCard">
-                <img src={sponsor.logo} alt={sponsor.name} class={`sponsorLogoImg ${sponsor.class || ''}`.trim()} />
-              </div>
-            ))}
+            {bronzeSponsors.map((sponsor: Sponsor) => {
+              const link = sponsor.url || sponsor.website;
+              return link ? (
+                <a
+                  href={link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="sponsorLogoCard sponsorLogoLink"
+                  title={`Visit ${sponsor.name}'s website`}
+                  aria-label={`Visit ${sponsor.name}'s website (opens in a new tab)`}
+                >
+                  <img src={sponsor.logo} alt={sponsor.name} class={`sponsorLogoImg ${sponsor.class || ''}`.trim()} />
+                </a>
+              ) : (
+                <div class="sponsorLogoCard">
+                  <img src={sponsor.logo} alt={sponsor.name} class={`sponsorLogoImg ${sponsor.class || ''}`.trim()} />
+                </div>
+              );
+            })}
           </div>
         ) : (
           <div class="empty-tier-card">

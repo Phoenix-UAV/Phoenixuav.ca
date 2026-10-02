@@ -2,4 +2,5 @@
 
 TODO:
 
-- Revamp the about page. Include team members and stuff
+- Revamp the about page. Change the text
+- Add other Members

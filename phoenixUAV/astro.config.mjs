@@ -9,9 +9,8 @@ export default defineConfig({
     vite: {
     plugins: [tailwindcss()], 
   },
-  fonts: 
-    [
-      {
+  fonts: [
+    {
       provider: fontProviders.local(),
       name: "BankGothicBold",
       cssVariable: "--bank-gothic-bold",
@@ -20,8 +19,15 @@ export default defineConfig({
           src: ['./src/assets/fonts/bankgothic-md-bt/BankGothicBold.ttf'],
           weight: 'normal',
           style: 'normal'
-         }]
-        }
-      } 
-    ]
+        }]
+      }
+    },
+    {
+      provider: fontProviders.google(),
+      name: "Inter",
+      cssVariable: "--font-inter",
+      weights: [400, 500, 600, 700],
+      styles: ['normal']
+    }
+  ]
 });
