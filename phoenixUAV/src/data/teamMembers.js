@@ -28,8 +28,9 @@ export const subteamMembers = [
       { 
         name: "Aryan Husain", 
         role: "Team Lead", 
-        image: "/Team-members/Profile_placeholder.png", 
+        image: "/Team-members/Aryan.jpg", 
         email: "aahusain@mun.ca",
+        linkedin: "https://www.linkedin.com/in/aryan-abidi-husain-742992287/"
       },
       { 
         name: "Abner Zhang", 
@@ -174,6 +175,14 @@ export const subteamMembers = [
       //  email: "lead@phoenixuav.ca",
       //  website: "https://example.com"
       //},
+
+      { 
+        name: "Alphy Eldo", 
+        role: "Structures Member", 
+        image: "/Team-members/Alphy.jpg",
+        email: "aaeldo@mun.ca",
+        linkedin: "https://www.linkedin.com/in/alphy-alias-eldo/"
+      },
       
     ]
   },
@@ -196,7 +205,7 @@ export const subteamMembers = [
       { 
         name: "Rohan Torul", 
         role: "Flight Systems Advisor", 
-        image: "/Team-members/Profile_placeholder.png",
+        image: "/Team-members/Rohan.png",
         github: "https://github.com/RohanTorul",
       },
 
