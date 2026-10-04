@@ -51,6 +51,22 @@ main section,
 }
 
 /* Tier Specific Section Colors */
+.diamondTierSection {
+    background: linear-gradient(135deg, #38bdf8 0%, #38bdf8 50%, #38bdf8 100%);
+}
+
+.diamondTierSection .sponsorStripTitle {
+    color: #000000;
+}
+
+.diamondTierSection .empty-tier-card {
+    color: #000000;
+}
+
+.diamondTierSection .empty-tier-card a {
+    color: #000000;
+}
+
 .goldTierSection {
     background: linear-gradient(135deg, #ffc800 0%, #ffc800bd 100%);
 }

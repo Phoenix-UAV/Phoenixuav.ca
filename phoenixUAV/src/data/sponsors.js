@@ -1,5 +1,5 @@
 // src/data/sponsors.js
-// Sponsors data organized by tiers (Gold, Silver, Bronze).
+// Sponsors data organized by tiers (Diamond, Gold, Silver, Bronze).
 //
 // Supported properties for each sponsor:
 // - 'name': Name of the sponsor company/organization
@@ -7,6 +7,15 @@
 // - 'url': (Optional) Website URL for the sponsor. Clicking the logo opens this link in a new tab.
 // - 'website': (Optional) Alternative property for website URL.
 // - 'class': (Optional) Custom CSS class for specific logo sizing tweaks (e.g. "cenovus-logo", "hebron-logo", "hibernia-logo")
+
+export const diamondSponsors = [
+  // Example Diamond Sponsor Format:
+  // {
+  //   name: "Sponsor Name",
+  //   logo: "/sponsors/logo.png",
+  //   url: "https://example.com"
+  // }
+];
 
 export const goldSponsors = [
   { 

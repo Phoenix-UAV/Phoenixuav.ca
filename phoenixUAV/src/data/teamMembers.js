@@ -58,7 +58,7 @@ export const subteamMembers = [
       { 
         name: "Jack Ellison", 
         role: "Software Lead", 
-        image: "/Team-members/Profile_placeholder.png",
+        image: "/Team-members/Jack.jpg",
         email: "jtellison@mun.ca",
         github: "https://github.com/JackEllison4",
         website: "https://jackellison.ca"
@@ -143,10 +143,11 @@ export const subteamMembers = [
 
       { 
         name: "Alix Boivin", 
-        role: ""Software Member", 
-        image: "/Team-members/Profile_placeholder.png",
+        role: "Software Member", 
+        image: "/Team-members/Alix.jpg",
         email: "arboivin@mun.ca",
-        github: "https://github.com/Animalliketree"
+        github: "https://github.com/Animalliketree",
+        linkedin: "https://linkedin.com/alix-boivin"
       },
 
       { 
@@ -155,8 +156,7 @@ export const subteamMembers = [
         image: "/Team-members/Profile_placeholder.png",
         email: "marobinette@mun.ca",
         github: "https://github.com/ella-ti"
-      },
-      
+      },    
     ]
   },
 

@@ -2,7 +2,7 @@
 import BaseLayout from "../layouts/baseLayout.astro";
 import PageHeader from "../components/pageHeader.astro";
 import Footer from "../components/pageFooter.astro";
-import { goldSponsors, silverSponsors, bronzeSponsors } from "../data/sponsors.js";
+import { diamondSponsors, goldSponsors, silverSponsors, bronzeSponsors } from "../data/sponsors.js";
 import "../styles/sponsors.css";
 const PACKAGE = "/PACKAGE.pdf";
 
@@ -31,6 +31,41 @@ interface Sponsor {
           national events. Take a look at our sponsorship package below to
           discover different ways you can get involved!
         </p>
+      </div>
+    </section>
+
+    <!-- Diamond Sponsors Section -->
+    <section class="sponsorStripSection diamondTierSection">
+      <div class="sponsorStripContainer">
+        <h2 class="sponsorStripTitle">OUR DIAMOND SPONSORS</h2>
+        {diamondSponsors.length > 0 ? (
+          <div class="sponsorLogosGrid">
+            {diamondSponsors.map((sponsor: Sponsor) => {
+              const link = sponsor.url || sponsor.website;
+              return link ? (
+                <a
+                  href={link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="sponsorLogoCard sponsorLogoLink"
+                  title={`Visit ${sponsor.name}'s website`}
+                  aria-label={`Visit ${sponsor.name}'s website (opens in a new tab)`}
+                >
+                  <img src={sponsor.logo} alt={sponsor.name} class={`sponsorLogoImg ${sponsor.class || ''}`.trim()} />
+                </a>
+              ) : (
+                <div class="sponsorLogoCard">
+                  <img src={sponsor.logo} alt={sponsor.name} class={`sponsorLogoImg ${sponsor.class || ''}`.trim()} />
+                </div>
+              );
+            })}
+          </div>
+        ) : (
+          <div class="empty-tier-card">
+            <span>SPONSORSHIP OPPORTUNITIES AVAILABLE</span>
+            <a href="/contact">Become a Diamond Sponsor &rarr;</a>
+          </div>
+        )}
       </div>
     </section>
 
