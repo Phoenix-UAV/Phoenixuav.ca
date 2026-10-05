@@ -30,11 +30,6 @@ export const goldSponsors = [
     url: "https://www.gov.nl.ca"
   },
   { 
-    name: "PEGNL", 
-    logo: "/sponsors/pegnl_logo.png",
-    url: "https://www.pegnl.ca"
-  },
-  { 
     name: "Hebron", 
     logo: "/sponsors/Hebron-logo.png", 
     url: "https://www.hebronproject.com",
@@ -55,6 +50,12 @@ export const silverSponsors = [
   //   logo: "/sponsors/logo.png",
   //   url: "https://example.com"
   // }
+
+  { 
+    name: "PEGNL", 
+    logo: "/sponsors/pegnl_logo.png",
+    url: "https://www.pegnl.ca"
+  },
 ];
 
 export const bronzeSponsors = [
