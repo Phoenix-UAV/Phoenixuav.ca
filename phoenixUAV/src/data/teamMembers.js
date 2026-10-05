@@ -207,6 +207,8 @@ export const subteamMembers = [
         role: "Flight Systems Advisor", 
         image: "/Team-members/Rohan.png",
         github: "https://github.com/RohanTorul",
+        linkedin: "https://www.linkedin.com/in/rohan-k-torul/",
+        email: "rohan@torul.org"
       },
 
       { 
