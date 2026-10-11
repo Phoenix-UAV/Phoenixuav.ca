@@ -9,13 +9,12 @@ import Structures from "../assets/images/teamPhotos/Stuctures 1.png";
 import WingHeld from "../assets/images/teamPhotos/WingHeld 1.png";
 
 // Dynamically discover photo assets placed in public/photo-page/
-const photoPageGlob = import.meta.glob("../../public/photo-page/*", {
-  eager: true,
-  query: "?url",
-  import: "default",
-});
+const photoPageGlob = import.meta.glob("../../public/photo-page/*");
 
-const autoDiscoveredImages = Object.values(photoPageGlob);
+const autoDiscoveredImages = Object.keys(photoPageGlob).map((filePath) => {
+  const filename = filePath.split("/").pop();
+  return `/photo-page/${filename}`;
+});
 
 // Preferred sequence of curated images
 const curatedGalleryImages = [
@@ -35,8 +34,15 @@ const curatedGalleryImages = [
   "/photo-page/IMG_1849.jpg",
 ];
 
-// Helper to normalize image paths (strips query parameters like ?url)
-const normalize = (path) => (typeof path === "string" ? path.split("?")[0] : path);
+// Helper to extract a canonical identifier for each photo (by base filename)
+const getImageKey = (src) => {
+  if (typeof src !== "string") return String(src);
+  const clean = src.split("?")[0].replace(/\\/g, "/");
+  const filename = clean.split("/").pop() || clean;
+  // Strip Vite asset hash if present (e.g. 'QV2A9565.Clr4R0MH.JPG' -> 'QV2A9565.JPG')
+  const baseName = filename.replace(/\.[a-zA-Z0-9_-]{8}\./, ".");
+  return baseName.toLowerCase();
+};
 
 // Merge curated images with auto-discovered images and strictly remove all duplicates
 const combinedImages = [
@@ -44,6 +50,14 @@ const combinedImages = [
   ...autoDiscoveredImages,
 ];
 
-export const galleryImages = Array.from(
-  new Set(combinedImages.map((src) => normalize(src)))
-);
+const seenKeys = new Set();
+export const galleryImages = [];
+
+for (const src of combinedImages) {
+  if (!src) continue;
+  const key = getImageKey(src);
+  if (!seenKeys.has(key)) {
+    seenKeys.add(key);
+    galleryImages.push(src);
+  }
+}
