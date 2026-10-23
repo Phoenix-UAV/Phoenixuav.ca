@@ -64,4 +64,9 @@ export const bronzeSponsors = [
     logo: "/sponsors/CoLab-Logo.png",
     url: "https://www.colabsoftware.com"
   },
+  { 
+    name: "Newfoundland And Labrador Hydro", 
+    logo: "/sponsors/nl-hydro-logo.jpg",
+    url: "https://nlhydro.com/"
+  },
 ];
