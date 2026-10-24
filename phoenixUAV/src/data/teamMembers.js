@@ -62,7 +62,8 @@ export const subteamMembers = [
         image: "/Team-members/Jack.jpg",
         email: "jtellison@mun.ca",
         github: "https://github.com/JackEllison4",
-        website: "https://jackellison.ca"
+        website: "https://jackellison.ca",
+        linkedin: "https://www.linkedin.com/in/jackellison4/"
       },
       { 
         name: "Chloe McNamara", 
