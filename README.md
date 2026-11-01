@@ -1,5 +1,7 @@
 # Phoenixuav.ca
 
+[![phoenixuav](https://img.shields.io/badge/phoenixuav-black?style=for-the-badge&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYBAMAAAASWSDLAAAAMFBMVEXo03fSqBXctR3o03DbuCLcuibbuivYsx%2Fryy%2Fz5pvw45fUrRnkxzLx33P27bz9%2BbyT%2F%2F8aAAAAEHRSTlMC%2FfwplmxGuv69VeDd73%2F9D2O7EQAAAAlwSFlzAAALEwAACxMBAJqcGAAAAQBJREFUGNNjYGBgYDZgQIBXDItfvoMKWC7gnPn%2F%2F08IbybX3LuzFq96BWJzXbO9O80AqjOnLKLFpCcArIgt4sgJh5yOVjDHLEepyeCEcwpzaAIDQ5iTkjZrkwFDdIkbA4NrhKI2i7YBi%2FbG7QYM5SyCQu5KAUmCikobGLJTBQUVBbdsFBQqL2PI3i4IBEJAHLaVgV0JzAGSBe4MDN7Su5UERUIEBVvSGRhM3be4K6kyFCmppwKtNU1gb9Io3qGkmgx2hceJoyY9Pq1gTzCfCU%2BIaDU%2FBmIuAHnw7jVbEM2w8tWql3dvLpgJ1sH8%2Fv%2F%2FmZO5JkNDZN07Y4Z1SCHEDCIAuRxLEUnxB28AAAAASUVORK5CYII%3D&color=ffd700&labelColor=000000)](https://phoenixuav.ca)
+
 TODO:
 
 - Revamp the about page. Change the text
