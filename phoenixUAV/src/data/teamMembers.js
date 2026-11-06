@@ -124,6 +124,14 @@ export const subteamMembers = [
       //  email: "lead@phoenixuav.ca",
       //  website: "https://example.com"
       //},
+
+      {
+        name: "Samuel Wheeler",
+        role: "Electrical Member",
+        image: "/Team-members/Samuel_Wheeler.jpg",
+        linkedin: "https://www.linkedin.com/in/samuel-wheeler-977aa3386/",
+        email: "sdwheeler@mun.ca"
+      }
       
     ]
   },
