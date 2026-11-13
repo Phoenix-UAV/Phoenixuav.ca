@@ -105,7 +105,12 @@ import "../styles/about.css";
                   {group.members.map((member) => (
                     <div class="teamMemberCard">
                       <div class="memberPhotoContainer">
-                        <img src={member.image || "/Team-members/Profile_placeholder.png"} alt={member.name} class="memberPhoto" />
+                        <img 
+                          src={member.image || "/Team-members/Profile_placeholder.png"} 
+                          alt={member.name} 
+                          class="memberPhoto" 
+                          style={member.imagePosition ? `object-position: ${member.imagePosition};` : undefined}
+                        />
                       </div>
                       <h4 class="memberName">{member.name}</h4>
                       <p class="memberRole">{member.role}</p>
