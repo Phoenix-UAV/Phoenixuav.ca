@@ -6,3 +6,4 @@ TODO:
 
 - Revamp the about page. Change the text
 - Add other Members
+- Get Cloudflare to auto build again
