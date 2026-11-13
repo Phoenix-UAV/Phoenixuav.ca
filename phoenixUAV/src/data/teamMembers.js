@@ -193,6 +193,13 @@ export const subteamMembers = [
         linkedin: "https://www.linkedin.com/in/alphy-alias-eldo/"
       },
       
+      { 
+        name: "Ian Cole", 
+        role: "Structures Member", 
+        image: "/Team-members/Ian_Cole.jpeg",
+        email: "icole@mun.ca",
+        linkedin: "www.linkedin.com/in/ian-cole1287"
+      },
     ]
   },
 
