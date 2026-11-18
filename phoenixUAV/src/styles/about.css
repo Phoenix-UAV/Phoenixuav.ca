@@ -341,6 +341,17 @@ main section {
     display: block;
 }
 
+/* Individual photo alignment overrides for optimal portrait framing */
+.memberPhoto[src*="Michael"],
+.memberPhoto[alt*="Michael"] {
+    object-position: center 75%;
+}
+
+.memberPhoto[src*="Chloe"],
+.memberPhoto[alt*="Chloe"] {
+    object-position: center 35%;
+}
+
 .memberName {
     font-family: var(--font-body);
     font-size: 0.95rem;

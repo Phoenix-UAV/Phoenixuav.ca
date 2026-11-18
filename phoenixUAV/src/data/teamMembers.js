@@ -5,6 +5,7 @@
 // - 'github': GitHub profile URL
 // - 'email': Email address (e.g. "name@phoenixuav.ca")
 // - 'website': Personal website or portfolio URL
+// - 'imagePosition': CSS object-position for custom photo framing (e.g. "center 20%", "center 75%")
 
 import { email } from "astro:schema";
 
@@ -41,8 +42,9 @@ export const subteamMembers = [
       { 
         name: "Yassin Elsayed", 
         role: "Business Lead", 
-        image: "/Team-members/Profile_placeholder.png",
-        email: "ytelsayed@mun.ca"
+        image: "/Team-members/Yassin.png",
+        email: "ytelsayed@mun.ca",
+        linkedin: "https://www.linkedin.com/in/yassin-elsayed-98a206366/"
       },
       { 
         name: "Jeffrie Pitchee", 
@@ -68,8 +70,10 @@ export const subteamMembers = [
       { 
         name: "Chloe McNamara", 
         role: "Structures Lead", 
-        image: "/Team-members/Profile_placeholder.png",
-        email: "cpmcnamara@mun.ca"
+        image: "/Team-members/Chloe.jpg",
+        imagePosition: "center 35%",
+        email: "cpmcnamara@mun.ca",
+        linkedin: "https://www.linkedin.com/in/chloe-mcnamara-666b95347/"
       },
     ]
   },
@@ -167,6 +171,15 @@ export const subteamMembers = [
         email: "marobinette@mun.ca",
         github: "https://github.com/ella-ti"
       },    
+
+      { 
+        name: "Jonathan Macdonald", 
+        role: "Software Member", 
+        image: "/Team-members/Jonathan_MacDonald.png",
+        email: "Jpamacdonald@mun.ca",
+        linkedin: "https://www.linkedin.com/in/jonathan-p-macdonald/"
+      },
+
     ]
   },
 
@@ -199,6 +212,14 @@ export const subteamMembers = [
         image: "/Team-members/Ian_Cole.jpeg",
         email: "icole@mun.ca",
         linkedin: "www.linkedin.com/in/ian-cole1287"
+      },
+
+      { 
+        name: "Michael Oni", 
+        role: "Structures Member", 
+        image: "/Team-members/Michael.jpg",
+        imagePosition: "center 75%",
+        email: "moni@mun.ca",
       },
     ]
   },
