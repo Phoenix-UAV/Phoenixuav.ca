@@ -246,6 +246,14 @@ export const subteamMembers = [
         linkedin: "https://www.linkedin.com/in/sam-beckett-1614133a5/",
         email: "sbeckett@mun.ca",
       },
+
+      { 
+        name: "Blake Crocker", 
+        role: "Structures Member", 
+        image: "/Team-members/Blake.jpg",
+        linkedin: "https://www.linkedin.com/in/blake-crocker-0a7b25390/",
+        email: "bacrocker@mun.ca",
+      },
     ]
   },
 
