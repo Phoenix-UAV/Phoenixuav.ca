@@ -36,8 +36,9 @@ export const subteamMembers = [
       { 
         name: "Abner Zhang", 
         role: "Aerodynamics & Propulsion Lead", 
-        image: "/Team-members/Profile_placeholder.png",
-        email: "yichengz@mun.ca"
+        image: "/Team-members/Abner.png",
+        email: "yichengz@mun.ca",
+        github: "https://github.com/yichengz-hub"
       },
       { 
         name: "Yassin Elsayed", 
@@ -135,6 +136,14 @@ export const subteamMembers = [
         image: "/Team-members/Samuel_Wheeler.jpg",
         linkedin: "https://www.linkedin.com/in/samuel-wheeler-977aa3386/",
         email: "sdwheeler@mun.ca"
+      },
+
+      {
+        name: "Ian Gill",
+        role: "Electrical Member",
+        image: "/Team-members/Ian_Gill.jpg",
+        linkedin: "https://www.linkedin.com/in/ian-gill-ba7985386/",
+        email: "ilgill@mun.ca"
       }
       
     ]
@@ -220,6 +229,22 @@ export const subteamMembers = [
         image: "/Team-members/Michael.jpg",
         imagePosition: "center 75%",
         email: "moni@mun.ca",
+      },
+
+      { 
+        name: "Jonathan Gilbert", 
+        role: "Structures Member", 
+        image: "/Team-members/Jonathan_Gilbert.png",
+        linkedin: "https://www.linkedin.com/in/jonathan-gilbert08/",
+        email: "jonathanhg@mun.ca",
+      },
+
+      { 
+        name: "Sam Beckett", 
+        role: "Structures Member", 
+        image: "/Team-members/Sam_Beckett.jpg",
+        linkedin: "https://www.linkedin.com/in/sam-beckett-1614133a5/",
+        email: "sbeckett@mun.ca",
       },
     ]
   },
