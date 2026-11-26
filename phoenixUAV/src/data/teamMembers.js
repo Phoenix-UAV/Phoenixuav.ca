@@ -50,8 +50,9 @@ export const subteamMembers = [
       { 
         name: "Jeffrie Pitchee", 
         role: "Electrical Lead", 
-        image: "/Team-members/Profile_placeholder.png",
-        email: "mrjpitchee@mun.ca"
+        image: "/Team-members/Jeffrie.png",
+        email: "mrjpitchee@mun.ca",
+        linkedin: "https://www.linkedin.com/in/jeffrie-pitchee-27a04a233/"
       },
       { 
         name: "Jackson Rose", 
@@ -276,6 +277,21 @@ export const subteamMembers = [
         linkedin: "https://www.linkedin.com/in/blake-crocker-0a7b25390/",
         email: "bacrocker@mun.ca",
       },
+
+      { 
+        name: "Jane Margarette Bataller", 
+        role: "Structures Member", 
+        image: "/Team-members/Jane.jpg",
+        linkedin: "https://www.linkedin.com/in/jane-margarette-bataller-12988a444/",
+      },
+
+      { 
+        name: "Vater Tese", 
+        role: "Structures Member", 
+        image: "/Team-members/Vater.jpg",
+        linkedin: "https://www.linkedin.com/in/vater-tese/",
+      },
+      
     ]
   },
 
