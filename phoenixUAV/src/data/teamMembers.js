@@ -93,7 +93,19 @@ export const subteamMembers = [
       //  email: "lead@phoenixuav.ca",
       //  website: "https://example.com"
       //},
+
+      {
+        name: "Adyaan Zeeshan",
+        role: "AERO & PROP Member",
+        image: "/Team-members/Profile_placeholder.png",
+      },
       
+      {
+        name: "Nathan Churchill",
+        role: "AERO & PROP Member",
+        image: "/Team-members/Profile_placeholder.png",
+      },
+ 
     ]
   },
 
@@ -111,7 +123,18 @@ export const subteamMembers = [
       //  email: "lead@phoenixuav.ca",
       //  website: "https://example.com"
       //},
-      
+
+      {
+        name: "Hailey Lake",
+        role: "BUSINESS Member",
+        image: "/Team-members/Profile_placeholder.png",
+      },
+
+      {
+        name: "Marcelo",
+        role: "BUSINESS Member",
+        image: "/Team-members/Profile_placeholder.png",
+      }
     ]
   },
 
@@ -145,7 +168,6 @@ export const subteamMembers = [
         linkedin: "https://www.linkedin.com/in/ian-gill-ba7985386/",
         email: "ilgill@mun.ca"
       }
-      
     ]
   },
 
